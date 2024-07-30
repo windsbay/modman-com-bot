@@ -10,8 +10,7 @@ body {
 
 .App {
   text-align: center;
-  background: var(--tg-theme-bg-color);
-  color: var(--tg-theme-text-color);
+
 }
 
 .App-logo {
@@ -26,14 +25,14 @@ body {
 }
 
 .App-header {
-  background-color: #282c34;
+  background: var(--tg-theme-bg-color);
+  color: var(--tg-theme-text-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
