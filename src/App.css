@@ -14,7 +14,7 @@ body {
 }
 
 p {
-  color: var(--tg-theme-text-color);
+  color: black;
 }
 
 .App-logo {
