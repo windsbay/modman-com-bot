@@ -13,6 +13,10 @@ body {
 
 }
 
+p {
+  color: var(--tg-theme-text-color);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
