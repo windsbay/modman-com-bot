@@ -12,7 +12,12 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <title>React App</title>
     <style>
+      #spinner {
+        position: absolute;
+        bottom: 0;
+      }
       .container {
+        position: relative;
         align-items: center;
         background-color: var(--tg-theme-bg-color);
         display: flex;
@@ -91,7 +96,6 @@
     <div id="spinner" class="container">
 
       <div class="loader">
-        <p>ЗАГРУЗКА</p>
         <div class="inner one"></div>
         <div class="inner two"></div>
         <div class="inner three"></div>
