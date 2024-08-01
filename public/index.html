@@ -12,17 +12,9 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <title>React App</title>
     <style>
-      .container {
-        position: relative;
-        align-items: center;
-        background-color: var(--tg-theme-bg-color);
-        display: flex;
-        justify-content: flex-end;
-        width: 200vw;
-      }
       .loader {
+        background-color: var(--tg-theme-bg-color);
         position: absolute;
-        bottom: 0;
         top: calc(50% - 32px);
         left: calc(50% - 32px);
         width: 64px;
@@ -88,7 +80,7 @@
     </style>
   </head>
   <body>
-    <div id="spinner" class="container">
+    <div id="spinner">
 
       <div class="loader">
         <div class="inner one"></div>
