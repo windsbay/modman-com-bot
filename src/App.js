@@ -1,16 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+
+const tg = window.Telegram.WebApp;
 
 function App() {
+  useEffect(() => {
+    tg.ready();
+  }, []);
   const [loading, setLoading] = useState(true);
   const spinner = document.getElementById('spinner');
   if(spinner){
     setTimeout(() => {
       spinner.style.display = 'none';
       setLoading(false);
-    },8000)
+    },2000)
   }
+
+  const onClose = () => {
+    tg.close();
+  }
+
   return (
     !loading && (
         <div className="App">
@@ -28,6 +38,7 @@ function App() {
               Learn React
             </a>
           </header>
+          <button onClick={onClose}>Закрыть</button>
         </div>
     )
   );
