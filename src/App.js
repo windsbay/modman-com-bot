@@ -21,6 +21,8 @@ function App() {
   }
   const wind = document.getElementById('windowsize');
   wind.style.height = window.innerHeight+'px';
+  spinner.style.width = window.innerWidth+'px';
+  spinner.style.height = window.innerHeight+'px';
 
 
   return (
