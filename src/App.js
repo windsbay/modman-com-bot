@@ -2,12 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from 'react';
 
-const tg = window.Telegram.WebApp;
+
 
 function App() {
-  useEffect(() => {
-    tg.ready();
-  }, []);
   const [loading, setLoading] = useState(true);
   const spinner = document.getElementById('spinner');
   if(spinner){
@@ -17,9 +14,7 @@ function App() {
     },8000)
   }
 
-  const onClose = () => {
-    tg.close();
-  }
+
 
   return (
     !loading && (
