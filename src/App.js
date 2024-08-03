@@ -6,9 +6,11 @@ import Header from "./components/Header/Header";
 
 function App() {
   const {tg} = useTelegram();
+
   useEffect(() =>{
     tg.ready();
   }, []);
+
   const [loading, setLoading] = useState(true);
   const spinner = document.getElementById('spinner');
   if(spinner){
@@ -29,7 +31,6 @@ function App() {
               Edit <code>src/App.js</code> and save to reload.
             </p>
             <Header />
-            <button onClick={onClose}>Закрыть</button>
           </header>
         </div>
     )
