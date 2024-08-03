@@ -24,6 +24,7 @@ function App() {
   wind.style.overflow = 'hidden';
   spinner.style.width = window.innerWidth+'px';
   spinner.style.height = window.innerHeight+'px';
+  spinner.style.backgroundSize = window.innerWidth+'px'+" "+window.innerHeight+'px'+';';
 
 
   return (
