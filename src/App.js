@@ -20,7 +20,7 @@ function App() {
     },8000)
   }
   const wind = document.getElementById('windowsize');
-  wind.height = window.innerHeight;
+  wind.style.height = window.innerHeight+'px';
 
 
   return (
