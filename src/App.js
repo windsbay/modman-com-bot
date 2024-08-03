@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from 'react';
-import {useTelegram} from "./components/hooks/useTelegram";
+import {useTelegram} from "./hooks/useTelegram";
 import Header from "./components/Header/Header";
 
 function App() {
@@ -25,6 +25,9 @@ function App() {
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo"/>
+            <p>
+              Edit <code>src/App.js</code> and save to reload.
+            </p>
             <Header />
             <button onClick={onClose}>Закрыть</button>
           </header>
