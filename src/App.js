@@ -13,8 +13,6 @@ function App() {
 
   const [loading, setLoading] = useState(true);
   const spinner = document.getElementById('spinner');
-  spinner.style.width = window.innerWidth;
-  spinner.style.height = window.innerHeight;
   if(spinner){
     setTimeout(() => {
       spinner.style.display = 'none';
