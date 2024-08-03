@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from 'react';
-import {useTelegram} from "./hooks/useTelegram";
+import {useTelegram} from "./components/hooks/useTelegram";
 import Header from "./components/Header/Header";
 
 function App() {
