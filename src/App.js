@@ -19,7 +19,8 @@ function App() {
       setLoading(false);
     },8000)
   }
-
+  const wind = document.getElementById('windowsize');
+  wind.height = window.innerHeight;
 
 
   return (
