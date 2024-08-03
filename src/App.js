@@ -21,6 +21,7 @@ function App() {
   }
   const wind = document.getElementById('windowsize');
   wind.style.height = window.innerHeight+'px';
+  wind.style.overflow = 'hidden';
   spinner.style.width = window.innerWidth+'px';
   spinner.style.height = window.innerHeight+'px';
 
