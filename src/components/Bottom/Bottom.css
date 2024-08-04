@@ -114,7 +114,7 @@ span.bell{
 #three:checked~span.heart{
     color:rgb(240, 78, 105);
     opacity:1;
-    transform:translate(33px,0px);
+    transform:translate(24px,0px);
 }
 #four:checked~span.bell{
     color: rgb(58, 83, 224);
