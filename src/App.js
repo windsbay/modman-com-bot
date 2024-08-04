@@ -6,6 +6,7 @@ import {Route, Routes} from "react-router-dom";
 import Tasks from "./components/Tasks/Tasks";
 import Friends from "./components/Friends/Friends";
 import Index from "./components/Index/Index";
+import Header from "./components/Header/Header";
 
 function App() {
   const {tg} = useTelegram();
@@ -33,7 +34,7 @@ function App() {
   return (
       !loading && (
         <div className="App">
-            <Index />
+            <Header />
 
         </div>
       )
