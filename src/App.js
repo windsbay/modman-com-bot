@@ -29,11 +29,10 @@ function App() {
   spinner.style.width = window.innerWidth+'px';
   spinner.style.height = window.innerHeight+'px';
   spinner.style.backgroundSize = window.innerWidth+'px'+" "+window.innerHeight+'px'+';';
-  const {startapp} = useParams();
+
 
   return (
         <div className="App">
-          <p>{startapp}</p>
             <Routes>
               <Route index element={<Index />} />
               <Route path={'tasks'} element={<Tasks />} />
