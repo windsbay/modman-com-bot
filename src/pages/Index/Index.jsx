@@ -6,7 +6,7 @@ const Index = () => {
     const {tg, user} = useTelegram();
     return (
         <div>
-            <img src={user?.profile.img} alt=""/>
+            INDEX TELEGRAM
         </div>
     );
 };
