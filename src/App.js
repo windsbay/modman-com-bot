@@ -32,17 +32,21 @@ function App() {
 
   const location = useLocation();
   const params = new URLSearchParams(location.search);
+  const {tgWebAppStartParam} = useParams();
 
   return (
       <div className="App">
         <div>
+          <h1>{tgWebAppStartParam}</h1>
+        </div>
+        <!--<div>
           <h1>Параметры:</h1>
           <ul>
             {Array.from(params.keys()).map((key) => (
                 <li key={key}>{key}: {params.get(key)}</li>
             ))}
           </ul>
-        </div>
+        </div>-->
         <Routes>
           <Route index element={<Index/>}/>
           <Route path={'tasks'} element={<Tasks/>}/>
