@@ -6,10 +6,43 @@ import {Route, Routes, useLocation, useParams} from "react-router-dom";
 import Tasks from "./components/Tasks/Tasks";
 import Friends from "./components/Friends/Friends";
 import Index from "./components/Index/Index";
-import Header from "./components/Header/Header";
+import mysql from 'mysql';
 
 function App() {
   const {tg} = useTelegram();
+  const conn = mysql.createConnection({
+    host: 'mysql.b559fbfa7208.hosting.myjino.ru',
+    port: 3306,
+    user: 'j03809714_modman',
+    password: "aLeksey2011!",
+    database: 'j03809714_modmancomm'
+  });
+
+  const fetchData = async () => {
+    const data = await conn.query('SELECT * FROM users WHERE user_id='+tg.initDataUnsafe?.user?.id);
+    if(data){
+      print('Successfully fetching users');
+    }
+    else {
+      if(ref === tg.initDataUnsafe?.user?.id){
+        await addData(tg.initDataUnsafe?.user?.id, "");
+      }
+      else await addData(tg.initDataUnsafe?.user?.id, ref);
+    }
+  }
+
+  const addData = async (user_id, referer) => {
+    const data = {
+      user_id: user_id,
+      referer: referer,
+      date_reg: Date.now(),
+      score: 0,
+      wallet: null
+    }
+    const query = 'INSERT INTO users SET?';
+    const res = await conn.query(query, data);
+    console.log(res);
+  };
 
   useEffect(() =>{
     tg.ready();
@@ -32,17 +65,12 @@ function App() {
 
   const location = useLocation();
   const params = new URLSearchParams(location.search);
+  const ref = params.get('tgWebAppStartParam');
 
   return (
       <div className="App">
         <div>
-          <h1>Параметры:</h1>
-          <ul>
-            {Array.from(params.keys()).map((key) => (
-                <li key={key}>{key}: {params.get(key)}</li>
-            ))}
-          </ul>
-          <h1>{params.get('tgWebAppStartParam')}</h1>
+          <h1>{ref}</h1>
         </div>
         <Routes>
           <Route index element={<Index/>}/>
