@@ -16,6 +16,7 @@ const Header = () => {
             <span className={'username'}>
                 {tg.initDataUnsafe?.user?.username}
             </span>
+            <img src={tg.initDataUnsafe?.user?.avatar} />
         </div>
     );
 };
