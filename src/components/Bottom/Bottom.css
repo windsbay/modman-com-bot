@@ -1,8 +1,15 @@
+.bottom {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+}
 #body{
     transition: background ease .5s;
     position: absolute;
     top:0;
-    left:0;
+    left:10%;
     background-color:rgb(97, 218, 157);
 }
 input{
@@ -14,7 +21,7 @@ label.icons{
     position: absolute;
     z-index: 3;
     color:rgb(155, 143, 143);
-    left: 0;
+    left: 10%;
     bottom: 0;
     transform: translate(-50%,-50%);
 }
@@ -40,7 +47,7 @@ div#box{
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     bottom:0;
-    left:0;
+    left:10%;
     transform:translate(-50%,-50%);
     border:1px solid white;
 }
@@ -51,7 +58,7 @@ span.title{
     position: absolute;
     z-index: 2;
     color:rgb(155, 143, 143);
-    left:0;
+    left:10%;
     bottom: 0;
     transform: translate(-50%,-50%);
     opacity: 0;
@@ -121,7 +128,7 @@ div.border{
 
     z-index: 2;
     bottom: 0;
-    left:0;
+    left:10%;
     transform: translate(-50%,-50%);
     border:6px solid rgb(97, 218, 157);
     width:45px;
@@ -162,7 +169,7 @@ div.fst{
 div.effect{
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 10%;
     transform: translate(-50%,-50%);
 
 }
