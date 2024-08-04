@@ -3,9 +3,9 @@ import './App.css';
 import React, {useEffect, useState} from 'react';
 import {useTelegram} from "./components/hooks/useTelegram";
 import {Route, Routes} from "react-router-dom";
-import Tasks from "./pages/Tasks/Tasks";
-import Friends from "./pages/Friends/Friends";
-import Index from "./pages/Index/Index";
+import Tasks from "./components/Tasks/Tasks";
+import Friends from "./components/Friends/Friends";
+import Index from "./components/Index";
 
 function App() {
   const {tg} = useTelegram();
