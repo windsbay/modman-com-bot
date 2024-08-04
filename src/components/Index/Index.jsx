@@ -8,7 +8,7 @@ import {useParams} from "react-router-dom";
 
 const Index = () => {
 
-    const {tg, user} = useTelegram();
+    const {user} = useTelegram();
 
 
     return (

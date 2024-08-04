@@ -6,7 +6,6 @@
     transition: background ease .5s;
     position: absolute;
     width:300vw;
-    height: 300vh;
     top:0;
     left:0;
     background-color:rgb(97, 218, 157);
