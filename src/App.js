@@ -42,7 +42,7 @@ function App() {
                 <li key={key}>{key}: {params.get(key)}</li>
             ))}
           </ul>
-          <h1>{params['tgWebAppStartParam']}</h1>
+          <h1>{params.get('tgWebAppStartParam')}</h1>
         </div>
         <Routes>
           <Route index element={<Index/>}/>
