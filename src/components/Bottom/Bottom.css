@@ -47,7 +47,7 @@ div#box{
     bottom: -58px;
     left:30%;
     transform:translate(-50%,-50%);
-    border:1px solid white;
+    border:1px solid black;
 }
 
 span.title{
