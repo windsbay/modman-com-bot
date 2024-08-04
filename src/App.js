@@ -60,11 +60,11 @@ function App() {
     },8000)
   }*/
   const wind = document.getElementById('windowsize');
-  wind.style.height = window.innerHeight+'px';
+  wind.style.height = 'var(--tg-viewport-stable-height)';
   wind.style.overflow = 'hidden';
   spinner.style.width = window.innerWidth+'px';
-  spinner.style.height = window.innerHeight+'px';
-  spinner.style.backgroundSize = window.innerWidth+'px'+" "+window.innerHeight+'px'+';';
+  spinner.style.height = 'var(--tg-viewport-stable-height)';
+  spinner.style.backgroundSize = 'var(--tg-viewport-stable-width)'+" "+"var(--tg-viewport-stable-height);";
 
   const location = useLocation();
   const params = new URLSearchParams(location.search);
