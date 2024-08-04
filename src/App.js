@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from 'react';
 import {useTelegram} from "./components/hooks/useTelegram";
-import {Route, Routes, useParams} from "react-router-dom";
+import {Route, Routes, useLocation, useParams} from "react-router-dom";
 import Tasks from "./components/Tasks/Tasks";
 import Friends from "./components/Friends/Friends";
 import Index from "./components/Index/Index";
@@ -29,21 +29,19 @@ function App() {
   spinner.style.width = window.innerWidth+'px';
   spinner.style.height = window.innerHeight+'px';
   spinner.style.backgroundSize = window.innerWidth+'px'+" "+window.innerHeight+'px'+';';
-  const {startapp} = useParams();
-  let ref = "";
 
-  if(startapp && startapp.length > 0){
-    ref = "Ref: "+startapp;
-  }
-  else {
-    ref = "";
-  }
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+
   return (
       <div className="App">
         <div>
-          <p>{
-            ref
-          }</p>
+          <h1>Параметры:</h1>
+          <ul>
+            {Array.from(params.keys()).map((key) => (
+                <li key={key}>{key}: {params.get(key)}</li>
+            ))}
+          </ul>
         </div>
         <Routes>
           <Route index element={<Index/>}/>
