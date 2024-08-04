@@ -7,7 +7,7 @@ const Index = () => {
 
     const {user} = useTelegram();
     return (
-        <div className={index}>
+        <div className={'index'}>
             <h1>{user?.username}</h1>
         </div>
     );
