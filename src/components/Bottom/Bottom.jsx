@@ -16,9 +16,8 @@ const Bottom = () => {
             </div>
             <div id="body"></div>
             <span className="title home">Home</span>
-            <span className="title search">Search</span>
-            <span className="title heart">Likes</span>
-            <span className="title bell">Notifications</span>
+            <span className="title search">Tasks</span>
+            <span className="title heart">Friends</span>
             <div className="border"></div>
             <div className="effect"></div>
         </div>
