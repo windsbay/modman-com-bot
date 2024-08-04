@@ -22,6 +22,7 @@ function App() {
     const data = await conn.query('SELECT * FROM users WHERE user_id='+tg.initDataUnsafe?.user?.id);
     if(data){
       print('Successfully fetching users');
+      return data;
     }
     else {
       if(ref === tg.initDataUnsafe?.user?.id){
