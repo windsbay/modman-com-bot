@@ -1,9 +1,17 @@
 .index {
     box-sizing: border-box;
+
+    h1 {
+        color: var(--tg-theme-text-color);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2em;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+        justify-self: center;
+        margin-top: 100px;
+    }
 }
 
-h1 {
-    color: var(--tg-theme-text-color);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2em;
-}

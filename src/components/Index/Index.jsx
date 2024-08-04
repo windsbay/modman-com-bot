@@ -8,6 +8,7 @@ const Index = () => {
     const {user} = useTelegram();
     return (
         <div className={'index'}>
+            <img src={user?.photo_url} alt={user?.username} />
             <h1>{user?.username}</h1>
         </div>
     );
