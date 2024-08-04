@@ -11,7 +11,7 @@ const Bottom = () => {
             <input type="radio" id="three" name="buttons" />
             <label htmlFor="three" className="icons heart"><span className="glyphicon glyphicon-heart"></span></label>
             <input type="radio" id="four" name="buttons" disabled={true}/>
-            <label htmlFor="four" className="icons bell"><span className="glyphicon glyphicon-bell"></span></label>
+            <label htmlFor="four" className="icons bell"><span className="glyphicon glyphicon-wallet"></span></label>
             <div id="box">
             </div>
             <div id="body"></div>
