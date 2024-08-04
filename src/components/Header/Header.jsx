@@ -6,7 +6,7 @@ import './Header.css';
 
 
 const Header = () => {
-    //const {user, onClose} = useTelegram();
+    const {user, onClose} = useTelegram();
     const tg = window.Telegram.WebApp;
 
 
