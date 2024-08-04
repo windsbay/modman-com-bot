@@ -6,11 +6,12 @@ import {Route, Routes, useLocation, useParams} from "react-router-dom";
 import Tasks from "./components/Tasks/Tasks";
 import Friends from "./components/Friends/Friends";
 import Index from "./components/Index/Index";
-import mysql from 'mysql';
+//import mysql from 'mysql';
 
 function App() {
   const {tg} = useTelegram();
-  const conn = mysql.createConnection({
+
+  /*const conn = mysql.createConnection({
     host: 'mysql.b559fbfa7208.hosting.myjino.ru',
     port: 3306,
     user: 'j03809714_modman',
@@ -43,7 +44,7 @@ function App() {
     const query = 'INSERT INTO users SET?';
     const res = await conn.query(query, data);
     console.log(res);
-  };
+  };*/
 
   useEffect(() =>{
     tg.ready();
