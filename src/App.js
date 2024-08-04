@@ -34,11 +34,7 @@ function App() {
       !loading && (
         <div className="App">
             <Index />
-        <!--  <Routes>
-              <Route index element={<Index />} />
-              <Route path={'tasks'} element={<Tasks />} />
-              <Route path={'friends'} element={<Friends />} />
-          </Routes> -->
+
         </div>
       )
   );
