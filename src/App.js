@@ -6,6 +6,7 @@ import {Route, Routes, useLocation, useParams} from "react-router-dom";
 import Tasks from "./components/Tasks/Tasks";
 import Friends from "./components/Friends/Friends";
 import Index from "./components/Index/Index";
+import Bottom from "./components/Bottom/Bottom";
 //import mysql from 'mysql';
 
 function App() {
@@ -79,6 +80,7 @@ function App() {
           <Route path={'tasks'} element={<Tasks/>}/>
           <Route path={'friends'} element={<Friends/>}/>
         </Routes>
+        <Bottom />
       </div>
   );
 }
