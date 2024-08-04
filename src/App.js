@@ -3,6 +3,9 @@ import './App.css';
 import React, {useEffect, useState} from 'react';
 import {useTelegram} from "./components/hooks/useTelegram";
 import Header from "./components/Header/Header";
+import {Route, Routes} from "react-router-dom";
+import Profile from "./components/Profile/Profile";
+import Tasks from "./components/Tasks/Tasks";
 
 function App() {
   const {tg} = useTelegram();
@@ -30,13 +33,11 @@ function App() {
   return (
     !loading && (
         <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo"/>
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <Header />
-          </header>
+          <Header />
+          <Routes>
+              <Route index element={<Profile />} />
+              <Route path={'tasks'} element={<Tasks />} />
+          </Routes>
         </div>
     )
   );
