@@ -59,13 +59,13 @@ function App() {
       setLoading(false);
     },8000)
   }*/
-  /*const wind = document.getElementById('windowsize');
+  const wind = document.getElementById('windowsize');
   wind.style.height = 'var(--tg-viewport-stable-height)';
   wind.style.overflow = 'hidden';
   spinner.style.width = 'var(--tg-viewport-stable-width)';
   spinner.style.height = 'var(--tg-viewport-stable-height)';
   spinner.style.backgroundSize = 'var(--tg-viewport-stable-width)'+" "+"var(--tg-viewport-stable-height);";
-*/
+
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const ref = params.get('tgWebAppStartParam');
