@@ -45,8 +45,7 @@ div#box{
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     bottom: -58px;
-    left:30%;
-    transform:translate(-50%,-50%);
+    left:0;
     border:1px solid black;
 }
 
