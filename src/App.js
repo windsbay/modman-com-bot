@@ -29,16 +29,28 @@ function App() {
   spinner.style.width = window.innerWidth+'px';
   spinner.style.height = window.innerHeight+'px';
   spinner.style.backgroundSize = window.innerWidth+'px'+" "+window.innerHeight+'px'+';';
+  const {startapp} = useParams();
+  let ref = "";
 
-
+  if(startapp && startapp.length > 0){
+    ref = "Ref: "+startapp;
+  }
+  else {
+    ref = "";
+  }
   return (
-        <div className="App">
-            <Routes>
-              <Route index element={<Index />} />
-              <Route path={'tasks'} element={<Tasks />} />
-              <Route path={'friends'} element={<Friends />} />
-            </Routes>
+      <div className="App">
+        <div>
+          <p>{
+            ref
+          }</p>
         </div>
+        <Routes>
+          <Route index element={<Index/>}/>
+          <Route path={'tasks'} element={<Tasks/>}/>
+          <Route path={'friends'} element={<Friends/>}/>
+        </Routes>
+      </div>
   );
 }
 

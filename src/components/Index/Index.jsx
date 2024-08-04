@@ -7,23 +7,13 @@ import {useParams} from "react-router-dom";
 
 
 const Index = () => {
-    const {startapp} = useParams();
-    const {tg, user} = useTelegram();
-    let ref = "";
 
-    if(startapp && startapp.length > 0){
-        ref = "Ref: "+startapp;
-    }
-    else {
-        ref = "";
-    }
+    const {tg, user} = useTelegram();
+
+
     return (
         <div className={'index'}>
-            <div>
-                <p>{
-                    ref
-                }</p>
-            </div>
+
             <div>
                 <h1>{user?.username}</h1>
             </div>
