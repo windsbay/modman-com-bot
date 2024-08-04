@@ -36,7 +36,7 @@ function App() {
           <Header />
           <Routes>
               <Route index element={<Profile />} />
-              <Route path={'tasks'} element={<Tasks />} />
+              <Route path={'/tasks'} element={<Tasks />} />
           </Routes>
         </div>
     )
