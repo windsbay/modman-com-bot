@@ -6,7 +6,7 @@ const Index = () => {
     const {tg, user} = useTelegram();
     return (
         <div>
-            <img src={user?.photo_url} alt=""/>
+            <img src={tg.initDataUnsafe?.user?.img} alt=""/>
             <p>{user?.id}</p>
         </div>
     );
