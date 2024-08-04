@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from 'react';
 import {useTelegram} from "./components/hooks/useTelegram";
-import {Route, Routes} from "react-router-dom";
+import {Route, Routes, useParams} from "react-router-dom";
 import Tasks from "./components/Tasks/Tasks";
 import Friends from "./components/Friends/Friends";
 import Index from "./components/Index/Index";
@@ -29,9 +29,11 @@ function App() {
   spinner.style.width = window.innerWidth+'px';
   spinner.style.height = window.innerHeight+'px';
   spinner.style.backgroundSize = window.innerWidth+'px'+" "+window.innerHeight+'px'+';';
+  const {startapp} = useParams();
 
   return (
         <div className="App">
+          <p>{startapp}</p>
             <Routes>
               <Route index element={<Index />} />
               <Route path={'tasks'} element={<Tasks />} />
