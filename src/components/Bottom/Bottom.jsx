@@ -3,7 +3,7 @@ import './Bottom.css';
 
 const Bottom = () => {
     return (
-        <div>
+        <div className="bottom">
             <input type="radio" id="one" name="buttons" checked/>
             <label htmlFor="one" className="icons home"><span className="glyphicon glyphicon-home"></span></label>
             <input type="radio" id="two" name="buttons"/>
