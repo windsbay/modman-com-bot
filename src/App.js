@@ -29,7 +29,7 @@ function App() {
   spinner.style.width = window.innerWidth+'px';
   spinner.style.height = window.innerHeight+'px';
   spinner.style.backgroundSize = window.innerWidth+'px'+" "+window.innerHeight+'px'+';';
-
+  if(tg.initDataUnsafe?.tgWebAppStartParam)
 
   return (
         <div className="App">

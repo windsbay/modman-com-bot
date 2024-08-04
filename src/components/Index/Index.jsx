@@ -5,11 +5,16 @@ import {useTelegram} from "../hooks/useTelegram";
 
 const Index = () => {
 
-    const {user} = useTelegram();
+    const {tg, user} = useTelegram();
     return (
         <div className={'index'}>
-            <img src={user?.photo_url} alt={user?.username} />
-            <h1>{user?.username}</h1>
+            <div>
+                <h1>{user?.username}</h1>
+            </div>
+            <div>
+                <h2>15,000</h2>
+            </div>
+
         </div>
     );
 };
