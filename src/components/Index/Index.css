@@ -1,3 +1,7 @@
+.index {
+    box-sizing: border-box;
+}
+
 h1 {
     color: var(--tg-theme-text-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;

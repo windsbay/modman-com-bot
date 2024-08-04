@@ -5,7 +5,7 @@ import {useTelegram} from "../hooks/useTelegram";
 const Index = () => {
     const {user} = useTelegram();
     return (
-        <div>
+        <div className={index}>
             <h1>{user?.username}</h1>
         </div>
     );
