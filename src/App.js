@@ -16,12 +16,12 @@ function App() {
 
   const [loading, setLoading] = useState(true);
   const spinner = document.getElementById('spinner');
-  /*if(spinner){
+  if(spinner){
     setTimeout(() => {
       spinner.style.display = 'none';
       setLoading(false);
     },8000)
-  }*/
+  }
   const wind = document.getElementById('windowsize');
   wind.style.height = window.innerHeight+'px';
   wind.style.overflow = 'hidden';
@@ -31,14 +31,15 @@ function App() {
 
 
   return (
+      !loading && (
         <div className="App">
-
           <Routes>
               <Route index element={<Index />} />
               <Route path={'tasks'} element={<Tasks />} />
               <Route path={'friends'} element={<Friends />} />
           </Routes>
         </div>
+      )
   );
 }
 
