@@ -31,7 +31,6 @@ function App() {
 
 
   return (
-    !loading && (
         <div className="App">
           <Header />
           <Routes>
@@ -39,7 +38,6 @@ function App() {
               <Route path={'tasks'} element={<Tasks />} />
           </Routes>
         </div>
-    )
   );
 }
 
