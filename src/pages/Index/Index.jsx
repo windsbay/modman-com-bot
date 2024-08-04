@@ -3,11 +3,12 @@ import React from 'react';
 import {useTelegram} from "../../components/hooks/useTelegram";
 
 const Index = () => {
-    const {tg, user} = useTelegram();
+    const {tg, user, username, avatar} = useTelegram();
+
     return (
         <div>
-            <img src={tg.initDataUnsafe?.user?.img} alt=""/>
-            <p>{user?.id}</p>
+            <img src={avatar} alt=""/>
+            <h1>{username}</h1>
         </div>
     );
 };
