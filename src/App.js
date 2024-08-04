@@ -21,7 +21,7 @@ function App() {
   const fetchData = async () => {
     const data = await conn.query('SELECT * FROM users WHERE user_id='+tg.initDataUnsafe?.user?.id);
     if(data){
-      print('Successfully fetching users');
+      console.log('Successfully fetching users');
       return data;
     }
     else {
