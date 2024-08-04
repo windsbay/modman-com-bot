@@ -1,4 +1,5 @@
 import React from 'react';
+import './Index.css';
 
 import {useTelegram} from "../hooks/useTelegram";
 
