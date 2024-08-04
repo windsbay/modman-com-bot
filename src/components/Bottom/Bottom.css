@@ -8,7 +8,7 @@
 #body{
     transition: background ease .5s;
     position: absolute;
-    top:0;
+    top: calc(100% - 100px);
     left:10%;
     background-color:rgb(97, 218, 157);
 }
@@ -21,6 +21,7 @@ label.icons{
     position: absolute;
     z-index: 3;
     color:rgb(155, 143, 143);
+    top: calc(100% - 100px);
     left: 10%;
     bottom: 0;
     transform: translate(-50%,-50%);
@@ -41,11 +42,12 @@ div#box{
     z-index: 1;
     width:350px;
     height:100px;
-    background-color: white;
+    background-color: black;
     box-shadow:0px 1px 2px black;
     position: absolute;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    top: calc(100% - 100px);
     bottom:0;
     left:10%;
     transform:translate(-50%,-50%);
@@ -58,6 +60,7 @@ span.title{
     position: absolute;
     z-index: 2;
     color:rgb(155, 143, 143);
+    top: calc(100% - 100px);
     left:10%;
     bottom: 0;
     transform: translate(-50%,-50%);
@@ -170,6 +173,7 @@ div.effect{
     position: absolute;
     bottom: 0;
     left: 10%;
+    top: calc(100% - 100px);
     transform: translate(-50%,-50%);
 
 }
