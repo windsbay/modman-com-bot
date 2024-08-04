@@ -3,10 +3,10 @@ import React from 'react';
 import {useTelegram} from "../hooks/useTelegram";
 
 const Index = () => {
-    const {user} = useTelegram();
+    const {tg, user} = useTelegram();
     return (
         <div className={index}>
-            <h1>{user?.username}</h1>
+            <h1>{tg.initDataUnsafe?.user?.username}</h1>
         </div>
     );
 };
