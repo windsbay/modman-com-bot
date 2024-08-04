@@ -6,6 +6,7 @@
 
 .App {
   text-align: center;
+  background-color: var(--tg-theme-bg-color);
 }
 
 h1{
