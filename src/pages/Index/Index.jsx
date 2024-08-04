@@ -1,7 +1,6 @@
 import React from 'react';
-import './Profile.css';
 
-const Profile = () => {
+const Index = () => {
     return (
         <div>
             PROFILE
@@ -9,4 +8,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default Index;

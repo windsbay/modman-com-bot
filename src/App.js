@@ -4,8 +4,9 @@ import React, {useEffect, useState} from 'react';
 import {useTelegram} from "./components/hooks/useTelegram";
 import Header from "./components/Header/Header";
 import {Route, Routes} from "react-router-dom";
-import Profile from "./components/Profile/Profile";
-import Tasks from "./components/Tasks/Tasks";
+import Tasks from "./pages/Tasks/Tasks";
+import Friends from "./pages/Friends/Friends";
+import Index from "./pages/Index/Index";
 
 function App() {
   const {tg} = useTelegram();
@@ -34,8 +35,9 @@ function App() {
         <div className="App">
           <Header />
           <Routes>
-              <Route index element={<Profile />} />
+              <Route index element={<Index />} />
               <Route path={'tasks'} element={<Tasks />} />
+              <Route path={'friends'} element={<Friends />} />
           </Routes>
         </div>
   );
