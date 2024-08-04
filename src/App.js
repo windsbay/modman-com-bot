@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from 'react';
 import {useTelegram} from "./components/hooks/useTelegram";
-import Header from "./components/Header/Header";
 import {Route, Routes} from "react-router-dom";
 import Tasks from "./pages/Tasks/Tasks";
 import Friends from "./pages/Friends/Friends";
@@ -33,7 +32,7 @@ function App() {
 
   return (
         <div className="App">
-          <Header />
+
           <Routes>
               <Route index element={<Index />} />
               <Route path={'tasks'} element={<Tasks />} />
