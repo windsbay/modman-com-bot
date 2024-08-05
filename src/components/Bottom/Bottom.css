@@ -36,7 +36,7 @@ label.bell{
 }
 div#box{
     z-index: 1;
-    width: 350px;
+    width: 400px;
     height:120px;
     background-color: black;
     box-shadow:0px 1px 2px black;
@@ -123,6 +123,7 @@ div.border{
     z-index: 2;
     bottom: -10px;
     right: 0;
+    left: 0;
     transform: translate(0,0);
     border:6px solid rgb(97, 218, 157);
     width:45px;
