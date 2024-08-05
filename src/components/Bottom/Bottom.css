@@ -7,7 +7,7 @@
     transition: background ease .5s;
     position: absolute;
     top:0;
-    left:15%;
+    left:0;
     background-color:rgb(97, 218, 157);
 }
 input{
@@ -19,7 +19,6 @@ label.icons{
     position: absolute;
     z-index: 3;
     color:rgb(155, 143, 143);
-    right: 0;
     left: 0;
     bottom: 0;
 }
@@ -45,7 +44,6 @@ div#box{
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     bottom: 0;
-    right: 0;
     left:0;
     border:1px solid black;
 }
@@ -57,7 +55,7 @@ span.title{
     z-index: 2;
     color:rgb(155, 143, 143);
     left:0;
-    bottom: 25px;
+    bottom: 0;
     opacity: 0;
 }
 span.home{
@@ -126,7 +124,6 @@ div.border{
     z-index: 2;
     bottom: 0;
     left:0;
-    right: 0;
     border:6px solid rgb(97, 218, 157);
     width:45px;
     height: 45px;
@@ -167,7 +164,6 @@ div.effect{
     position: absolute;
     bottom: 0;
     left:0;
-    right: 0;
 
 }
 
