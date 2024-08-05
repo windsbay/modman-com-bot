@@ -44,7 +44,6 @@ div#box{
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     bottom: -10px;
-    right:-100px;
     transform:translate(0,0);
     border:1px solid black;
 }
@@ -124,7 +123,6 @@ div.border{
 
     z-index: 2;
     bottom: -10px;
-    right: -100px;
     transform: translate(0,0);
     border:6px solid rgb(97, 218, 157);
     width:45px;
