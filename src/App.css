@@ -5,6 +5,8 @@
 }
 
 .App {
+  margin: 0;
+  padding: 0;
   text-align: center;
   color: var(--tg-theme-text-color);
   background-color: var(--tg-theme-bg-color);

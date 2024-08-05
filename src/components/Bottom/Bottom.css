@@ -6,7 +6,6 @@
 #body{
     transition: background ease .5s;
     position: absolute;
-    top:0;
     left:0;
     background-color:rgb(97, 218, 157);
 }
