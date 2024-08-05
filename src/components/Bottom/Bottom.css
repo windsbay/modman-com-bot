@@ -21,7 +21,7 @@ label.icons{
     color:rgb(155, 143, 143);
     left: 30%;
     bottom: 0;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,0);
 }
 label.home{
     transform: translate(-135px,-20px);
@@ -46,7 +46,7 @@ div#box{
     border-bottom-right-radius: 30px;
     bottom: -58px;
     left:30%;
-    transform:translate(-50%,-50%);
+    transform:translate(-50%,0);
     border:1px solid black;
 }
 
@@ -58,7 +58,7 @@ span.title{
     color:rgb(155, 143, 143);
     left:30%;
     bottom: 25px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,0);
     opacity: 0;
 }
 span.home{
