@@ -78,7 +78,6 @@ function App() {
           <Route path={'friends'} element={<Friends/>}/>
         </Routes>
         <Bottom/>
-        <div id="particles-js"></div>
       </div>
   );
 }
