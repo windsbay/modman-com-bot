@@ -1,17 +1,26 @@
 import React from 'react';
 import './Nota.css';
 
-const Nota = ({ top, left, size }) => {
+const notaTypes = [
+    { symbol: '', size: 'mall' },
+    { symbol: '', size: 'edium' },
+    { symbol: '', size: 'large' },
+    { symbol: '', size: 'mall' },
+    { symbol: '', size: 'edium' },
+    { symbol: '', size: 'large' },
+];
+
+const Nota = ({ top, left, size, symbol, notaType }) => {
     return (
         <div
-            className="nota"
+            className={`nota ${notaType}`}
             style={{
                 top: `${top}px`,
                 left: `${left}px`,
                 fontSize: `${size}px`,
             }}
         >
-            &#9835;
+            {symbol}
         </div>
     );
 };

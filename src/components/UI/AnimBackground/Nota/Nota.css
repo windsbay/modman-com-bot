@@ -1,8 +1,19 @@
 .nota {
     position: absolute;
     color: #fff;
-    font-size: 24px;
     transition: all 0.5s ease-out;
+}
+
+.nota.small {
+    font-size: 12px;
+}
+
+.nota.medium {
+    font-size: 24px;
+}
+
+.nota.large {
+    font-size: 36px;
 }
 
 .nota::before {

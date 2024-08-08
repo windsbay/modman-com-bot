@@ -23,13 +23,20 @@ const AnimBackground = () => {
 
     useEffect(() => {
         const intervalId = setInterval(() => {
+            const notaType = notaTypes[Math.floor(Math.random() * notaTypes.length)];
             const newNota = {
                 top: Math.random() * height,
                 left: Math.random() * width,
                 size: Math.random() * 24 + 12,
+                symbol: notaType.symbol,
+                notaType: notaType.size,
             };
 
             setNotas((prevNotas) => [...prevNotas, newNota]);
+
+            setTimeout(() => {
+                setNotas((prevNotas) => prevNotas.slice(1));
+            }, 5000);
         }, 1000);
 
         return () => {
@@ -40,7 +47,14 @@ const AnimBackground = () => {
     return (
         <div className="animated-background">
             {notas.map((nota, index) => (
-                <Nota key={index} top={nota.top} left={nota.left} size={nota.size} />
+                <Nota
+                    key={index}
+                    top={nota.top}
+                    left={nota.left}
+                    size={nota.size}
+                    symbol={nota.symbol}
+                    notaType={nota.notaType}
+                />
             ))}
         </div>
     );
