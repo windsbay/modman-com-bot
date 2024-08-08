@@ -7,7 +7,7 @@ import Tasks from "./components/Tasks/Tasks";
 import Friends from "./components/Friends/Friends";
 import Index from "./components/Index/Index";
 import Bottom from "./components/Bottom/Bottom";
-import AnimBackground from "./components/UI/AnimBackground/AnimBackground";
+import AnimatedBackground from "./components/UI/AnimatedBackground/AnimatedBackground";
 //import mysql from 'mysql';
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
 
   return (
       <div className="App">
-        <AnimBackground/>
+        <AnimatedBackground/>
         <Routes>
           <Route index element={<Index/>}/>
           <Route path={'tasks'} element={<Tasks/>}/>
