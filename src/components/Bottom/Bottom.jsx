@@ -1,6 +1,5 @@
 import React from 'react';
 import './Bottom.css';
-import {redirect} from "react-router-dom";
 
 const Bottom = () => {
     return (
