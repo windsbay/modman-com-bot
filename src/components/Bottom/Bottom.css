@@ -8,6 +8,9 @@ nav {
 }
 
 nav a {
+    float: none;
+    position: relative;
+    display: block;
     padding: 12px;
     color: #fff;
     text-decoration: none;
