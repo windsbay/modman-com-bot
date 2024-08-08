@@ -5,7 +5,7 @@ const Bottom = () => {
     const url = new URL(window.location.href);
     return (
         <div>
-            <p>{url}</p>
+            <p>{url.pathname}</p>
             <nav>
                 <a className="active" href="/">
                     <div className={'icon'}>
