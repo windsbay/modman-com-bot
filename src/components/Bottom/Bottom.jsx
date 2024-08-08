@@ -24,18 +24,6 @@ const Bottom = () => {
                     </div>
                     <div className={'name'}><span data-text={'Friends'}>Friends</span></div>
                 </a>
-                <a href={'/friends'}>
-                    <div className={'icon'}>
-                        <i className="fas fa-fw fa-briefcase" aria-hidden={true}></i>
-                    </div>
-                    <div className={'name'}><span data-text={'Friends'}>Friends</span></div>
-                </a>
-                <a href={'/friends'}>
-                    <div className={'icon'}>
-                        <i className="fas fa-fw fa-briefcase" aria-hidden={true}></i>
-                    </div>
-                    <div className={'name'}><span data-text={'Friends'}>Friends</span></div>
-                </a>
             </nav>
         </div>
     );
