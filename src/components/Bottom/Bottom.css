@@ -9,7 +9,7 @@ nav {
 
 nav a {
     display: block;
-    padding: 0 15px;
+    padding: 15px 15px;
     width: auto;
     text-align: center;
     box-sizing: border-box;
