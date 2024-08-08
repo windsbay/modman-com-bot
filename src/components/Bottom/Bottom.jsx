@@ -6,16 +6,17 @@ const Bottom = () => {
     return (
         <div>
             <nav>
+                <a className="active" href="/">
+                    <div className={'icon'}>
+                        <i className="fas fa-fw fa-home" aria-hidden={true}></i>
+                    </div>
+                    <div className={'name'}><span data-text={'Home'}>Home</span></div>
+                </a>
                 <a href={'/tasks'}>
                     <div className={'icon'}>
                         <i className="fas fa-fw fa-tasks" aria-hidden={true}></i>
                     </div>
                     <div className={'name'}><span data-text={'Tasks'}>Tasks</span></div>
-                </a>
-                <a className="active" href="/">
-                    <div className={'icon'}>
-                        <i className="fas fa-fw fa-home" aria-hidden={true}></i>
-                    </div>
                 </a>
                 <a href={'/friends'}>
                     <div className={'icon'}>
