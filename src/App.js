@@ -12,41 +12,6 @@ import Bottom from "./components/Bottom/Bottom";
 function App() {
   const {tg} = useTelegram();
 
-  /*const conn = mysql.createConnection({
-    host: 'mysql.b559fbfa7208.hosting.myjino.ru',
-    port: 3306,
-    user: 'j03809714_modman',
-    password: "aLeksey2011!",
-    database: 'j03809714_modmancomm'
-  });
-
-  const fetchData = async () => {
-    const data = await conn.query('SELECT * FROM users WHERE user_id='+tg.initDataUnsafe?.user?.id);
-    if(data){
-      console.log('Successfully fetching users');
-      return data;
-    }
-    else {
-      if(ref === tg.initDataUnsafe?.user?.id){
-        await addData(tg.initDataUnsafe?.user?.id, "");
-      }
-      else await addData(tg.initDataUnsafe?.user?.id, ref);
-    }
-  }
-
-  const addData = async (user_id, referer) => {
-    const data = {
-      user_id: user_id,
-      referer: referer,
-      date_reg: Date.now(),
-      score: 0,
-      wallet: null
-    }
-    const query = 'INSERT INTO users SET?';
-    const res = await conn.query(query, data);
-    console.log(res);
-  };*/
-
   useEffect(() =>{
     tg.ready();
   }, []);
@@ -70,9 +35,60 @@ function App() {
   const params = new URLSearchParams(location.search);
   const ref = params.get('tgWebAppStartParam');
 
+  const [particles, setParticles] = useState([]);
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = width;
+    canvas.height = height;
+
+    const particleCount = 100;
+    for (let i = 0; i < particleCount; i++) {
+      const x = Math.random() * width;
+      const y = Math.random() * height;
+      const vx = Math.random() * 2 - 1;
+      const vy = Math.random() * 2 - 1;
+      const size = Math.random() * 5 + 1;
+      const color = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.5)`;
+
+      particles.push({ x, y, vx, vy, size, color });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < particles.length; i++) {
+        const particle = particles[i];
+
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        if (particle.x < 0 || particle.x > width) {
+          particle.vx *= -1;
+        }
+        if (particle.y < 0 || particle.y > height) {
+          particle.vy *= -1;
+        }
+
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color;
+        ctx.fill();
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  }, [width, height]);
+
   return (
       <div className="App">
-
+        <canvas id={'canvas'} />
         <Routes>
           <Route index element={<Index/>}/>
           <Route path={'tasks'} element={<Tasks/>}/>
