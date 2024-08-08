@@ -2,7 +2,7 @@ import React from 'react';
 import './Index.css';
 
 import {useTelegram} from "../hooks/useTelegram";
-import {TelegramApi, TelegramAvatar} from 'react-telegram-api';
+import TelegramAvatar from "../UI/TelegramAvatar/TelegramAvatar";
 
 
 
