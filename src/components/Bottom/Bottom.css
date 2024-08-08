@@ -22,9 +22,3 @@ nav a:hover {
     background-color: #e040fb;
 }
 
-@media screen and (max-width: 500px) {
-    nav a {
-        float: none;
-        display: block;
-    }
-}
