@@ -12,7 +12,7 @@ const Index = () => {
 
 
     return (
-        <div className={'index'} id={'canvas'}>
+        <div className={'index'}>
             <h1>Home Page</h1>
             <div>
                 <h1>{user?.username}</h1>
