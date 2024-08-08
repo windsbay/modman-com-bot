@@ -14,13 +14,13 @@ const Bottom = () => {
                 </a>
                 <a href={'/tasks'}>
                     <div className={'icon'}>
-                        <i className="fas fa-fw fa-code" aria-hidden={true}></i>
+                        <i className="fas fa-fw fa-tasks" aria-hidden={true}></i>
                     </div>
                     <div className={'name'}><span data-text={'Tasks'}>Tasks</span></div>
                 </a>
                 <a href={'/friends'}>
                     <div className={'icon'}>
-                        <i className="fas fa-fw fa-briefcase" aria-hidden={true}></i>
+                        <i className="fas fa-fw fa-users" aria-hidden={true}></i>
                     </div>
                     <div className={'name'}><span data-text={'Friends'}>Friends</span></div>
                 </a>
