@@ -31,7 +31,7 @@ nav a:hover {
 }
 .icon{
     margin-bottom: -20px;
-    padding: 0;
+    padding: 0 50%;
 }
 
 a .icon {
