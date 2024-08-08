@@ -4,7 +4,6 @@ import { TweenLite } from 'gsap';
 
 
 const AnimBackground = () => {
-
     const [width, setWidth] = useState(window.innerWidth);
     const [height, setHeight] = useState(window.innerHeight);
     const [animateHeader, setAnimateHeader] = useState(true);
@@ -34,11 +33,28 @@ const AnimBackground = () => {
             for (let y = 0; y < height; y = y + height / 20) {
                 const px = x + Math.random() * width / 20;
                 const py = y + Math.random() * height / 20;
-                const p = { x: px, originX: px, y: py, originY: py };
+                const p = { x: px, originX: px, y: py, originY: py, closest: [], circle: null };
                 newPoints.push(p);
             }
         }
         setPoints(newPoints);
+
+        // добавьте эту строку, чтобы создать окружности для точек
+        points.forEach((p) => {
+            p.circle = new Circle(p, 2 + Math.random() * 2, 'rgba(156,217,249,0.3)');
+        });
+
+        // добавьте эту строку, чтобы найти ближайшие точки для каждой точки
+        points.forEach((p) => {
+            for (let i = 0; i < points.length; i++) {
+                if (points[i]!== p) {
+                    const distance = getDistance(p, points[i]);
+                    if (distance < 200) {
+                        p.closest.push(points[i]);
+                    }
+                }
+            }
+        });
     };
 
     const addListeners = () => {
@@ -84,7 +100,7 @@ const AnimBackground = () => {
     };
 
     const shiftPoint = (p) => {
-        TweenLite.to(p, 1 + Math.random(), {
+        TweenLite.to(p, 1 + 1 * Math.random(), {
             x: p.originX - 50 + Math.random() * 100,
             y: p.originY - 50 + Math.random() * 100,
             ease: 'Circ.easeInOut',
@@ -146,6 +162,7 @@ const AnimBackground = () => {
                 width: '100%',
                 height: '100%',
                 display: 'block',
+                backgroundColor: 'block',
             }}
         />
     );
