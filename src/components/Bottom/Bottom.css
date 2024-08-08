@@ -25,3 +25,17 @@ nav a:hover {
     background-color: #e040fb;
 }
 
+a .icon {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto 10px;
+}
+
+a .icon .fa {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+
+}
