@@ -46,3 +46,11 @@ a .name {
     display: block;
     overflow: hidden;
 }
+
+a .name span{
+    display: block;
+    position: relative;
+    color: #000;
+    line-height: 20px;
+    transition: 0.5s;
+}
