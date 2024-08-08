@@ -4,7 +4,7 @@ import './Friends.css';
 const Friends = () => {
     return (
         <div>
-            FRIENDS
+            <h1>Friends Page</h1>
         </div>
     );
 };

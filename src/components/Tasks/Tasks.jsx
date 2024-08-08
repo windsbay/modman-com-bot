@@ -4,7 +4,7 @@ import './Tasks.css';
 const Tasks = () => {
     return (
         <div>
-            TASKS
+            <h1>Tasks Page</h1>
         </div>
     );
 };

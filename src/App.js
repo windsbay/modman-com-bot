@@ -72,9 +72,6 @@ function App() {
 
   return (
       <div className="App">
-        <div>
-          <h1>{tg.initDataUnsafe?.user?.id}</h1>
-        </div>
         <Routes>
           <Route index element={<Index/>}/>
           <Route path={'tasks'} element={<Tasks/>}/>

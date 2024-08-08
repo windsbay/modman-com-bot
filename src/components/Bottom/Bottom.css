@@ -36,7 +36,7 @@ a .icon .fa {
     width: 100%;
     height: 100%;
     font-size: 30px;
-    margin-bottom: 0;
+    margin-bottom: -5px;
 }
 
 a .name {
@@ -44,6 +44,7 @@ a .name {
     height: 20px;
     width: 100%;
     display: block;
+    padding: 0;
     overflow: hidden;
 }
 
@@ -52,5 +53,4 @@ a .name span{
     position: relative;
     color: #000;
     line-height: 20px;
-    transition: 0.5s;
 }
