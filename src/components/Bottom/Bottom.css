@@ -10,6 +10,7 @@ nav {
 nav a {
     display: block;
     padding: 0 12px;
+    width: 100%;
     box-sizing: border-box;
     color: #fff;
     text-decoration: none;
@@ -50,6 +51,7 @@ a .name {
     width: 100%;
     display: block;
     padding: 0;
+    margin: 0;
     overflow: hidden;
 }
 
