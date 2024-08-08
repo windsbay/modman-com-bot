@@ -43,6 +43,7 @@ a .icon {
 }
 
 a .icon .fa {
+    position: relative;
     width: 100%;
     height: 100%;
     font-size: 30px;
