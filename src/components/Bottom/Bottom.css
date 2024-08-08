@@ -44,7 +44,7 @@ ul li a .icon .fa{
     line-height: 40px;
     font-size: 34px;
     transition: 0.5s; /* adding the transition to make it more attractive */
-    color: #000;
+    color: var(--tg-theme-text-color);
 }
 
 /* Change the color of icon on hover */
@@ -66,7 +66,7 @@ ul li a .name{
 ul li a .name span{
     display: block;
     position: relative;
-    color: #000;
+    color: var(--tg-theme-text-color);
     font-size: 18px; /* changing font size */
     line-height: 20px;
     transition: 0.5s; /* adding the transition to make it more attractive */
