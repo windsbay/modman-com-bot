@@ -9,7 +9,8 @@ ul{
     left: 50%;
     transform: translate(-50%,-50%);
     margin: 0;
-    background: var(--tg-theme-bg-color);
+    background-color: aliceblue;
+    /*background: var(--tg-theme-bg-color);*/
     display: flex;
 }
 /* Style the links inside the navigation bar */
