@@ -1,5 +1,6 @@
 nav {
     position: fixed;
+    display: flex;
     bottom: 0;
     width: 100%;
     background-color: #673ab7;
@@ -7,7 +8,7 @@ nav {
 }
 
 nav a {
-    display: flex;
+    display: block;
     padding: 12px;
     box-sizing: border-box;
     color: #fff;
