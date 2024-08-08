@@ -23,12 +23,6 @@ const Bottom = () => {
                     </div>
                     <div className={'name'}><span data-text={'Friends'}>Friends</span></div>
                 </a>
-                <a>
-                    <div className={'icon'}>
-                        <i className="fas fa-fw fa-briefcase" aria-hidden={true}></i>
-                    </div>
-                    <div className={'name'}><span data-text={'Wallet'}>Wallet</span></div>
-                </a>
             </nav>
         </div>
     );
