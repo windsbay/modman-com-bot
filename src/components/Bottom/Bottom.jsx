@@ -29,7 +29,6 @@ const Bottom = () => {
                     </div>
                     <div className={'name'}><span data-text={'Wallet'}>Wallet</span></div>
                 </a>
-                <div className={'clear'}></div>
             </nav>
         </div>
     );
