@@ -25,6 +25,10 @@ nav a:hover {
 .active {
     background-color: #e040fb;
 }
+.icon{
+    margin: 0;
+    padding: 0;
+}
 
 a .icon {
     width: 40px;
