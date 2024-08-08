@@ -39,12 +39,10 @@ const AnimBackground = () => {
         }
         setPoints(newPoints);
 
-        // добавьте эту строку, чтобы создать окружности для точек
         points.forEach((p) => {
             p.circle = new Circle(p, 2 + Math.random() * 2, 'rgba(156,217,249,0.3)');
         });
 
-        // добавьте эту строку, чтобы найти ближайшие точки для каждой точки
         points.forEach((p) => {
             for (let i = 0; i < points.length; i++) {
                 if (points[i]!== p) {
@@ -159,10 +157,13 @@ const AnimBackground = () => {
         <canvas
             ref={canvasRef}
             style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
                 width: '100%',
-                height: '100%',
-                display: 'block',
-                backgroundColor: 'block',
+                height: '100vh',
+                zIndex: -1,
+                backgroundColor: 'transparent',
             }}
         />
     );
