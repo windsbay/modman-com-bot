@@ -13,15 +13,14 @@ const Index = () => {
 
     return (
         <div className={'index'}>
-            <canvas id="canvas">
-                <h1>Home Page</h1>
-                <div>
-                    <h1>{user?.username}</h1>
-                </div>
-                <div>
-                    <h2>15,000</h2>
-                </div>
-            </canvas>
+            <h1>Home Page</h1>
+            <div>
+                <h1>{user?.username}</h1>
+            </div>
+            <div>
+                <h2>15,000</h2>
+            </div>
+            <canvas id="canvas"></canvas>
 
         </div>
     );
