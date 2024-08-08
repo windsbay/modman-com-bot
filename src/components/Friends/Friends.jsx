@@ -3,7 +3,7 @@ import './Friends.css';
 
 const Friends = () => {
     return (
-        <div>
+        <div className={'friends'}>
             <h1>Friends Page</h1>
         </div>
     );
