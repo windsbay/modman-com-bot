@@ -54,3 +54,7 @@ a .name span{
     color: #000;
     line-height: 20px;
 }
+
+.clear {
+    clear: both;
+}
