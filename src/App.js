@@ -72,6 +72,7 @@ function App() {
 
   return (
       <div className="App">
+        <canvas id="canvas"></canvas>
         <Routes>
           <Route index element={<Index/>}/>
           <Route path={'tasks'} element={<Tasks/>}/>
