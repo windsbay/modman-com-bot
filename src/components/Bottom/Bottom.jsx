@@ -2,9 +2,10 @@ import React from 'react';
 import './Bottom.css';
 
 const Bottom = () => {
-
+    const url = new URL(window.location.href);
     return (
         <div>
+            <p>{url}</p>
             <nav>
                 <a className="active" href="/">
                     <div className={'icon'}>
