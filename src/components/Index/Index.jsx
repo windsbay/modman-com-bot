@@ -18,7 +18,7 @@ const Index = () => {
                 <h1>{user?.username}</h1>
             </div>
             <div>
-                <TelegramAvatar user_id={user?.user_id} />
+                <TelegramAvatar />
             </div>
             <div>
                 <h2>15,000</h2>

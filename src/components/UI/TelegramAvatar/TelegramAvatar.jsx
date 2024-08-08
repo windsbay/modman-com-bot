@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import {useTelegram} from "../../hooks/useTelegram";
 
-const TelegramAvatar = (user_id) => {
+const TelegramAvatar = () => {
     const [photoUrl, setPhotoUrl] = useState(null);
     const [error, setError] = useState(null);
-    const userId = user_id; // ID пользователя
+    const userId = useTelegram().user; // ID пользователя
     const botToken = '7400849110:AAH4L-pCrJIHGhUBSHa2k4h6m0zzmQQ8rY8';
 
     useEffect(() => {
