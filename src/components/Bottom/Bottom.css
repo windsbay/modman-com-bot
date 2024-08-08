@@ -9,7 +9,7 @@ nav {
 
 nav a {
     display: block;
-    padding: 12px;
+    padding: 0 12px;
     box-sizing: border-box;
     color: #fff;
     text-decoration: none;
