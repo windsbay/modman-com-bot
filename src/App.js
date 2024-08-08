@@ -50,12 +50,11 @@ function App() {
     for (let i = 0; i < particleCount; i++) {
       const x = Math.random() * width;
       const y = Math.random() * height;
-      const vx = Math.random() * 5 - 2.5;
-      const vy = Math.random() * 5 - 2.5;
       const size = Math.random() * 10 + 1;
       const color = 'rgba(255, 255, 255, 0.5)';
+      const opacity = Math.random() * 0.5 + 0.5;
 
-      particles.push({ x, y, vx, vy, size, color });
+      particles.push({ x, y, size, color, opacity });
     }
 
     function animate() {
@@ -65,19 +64,11 @@ function App() {
       for (let i = 0; i < particles.length; i++) {
         const particle = particles[i];
 
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-
-        if (particle.x < 0 || particle.x > width) {
-          particle.vx *= -1;
-        }
-        if (particle.y < 0 || particle.y > height) {
-          particle.vy *= -1;
-        }
+        particle.opacity = Math.random() * 0.5 + 0.5;
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
+        ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`;
         ctx.filter = 'blur(2px)';
         ctx.fill();
       }
