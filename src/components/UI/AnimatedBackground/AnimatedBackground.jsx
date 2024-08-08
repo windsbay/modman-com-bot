@@ -4,7 +4,11 @@ import Coin from './Coin';
 import Particles from 'react-particles-js';
 
 const AnimatedBackground = () => {
-
+    const [coins, setCoins] = useState([]);
+    const [width, setWidth] = useState(window.innerWidth);
+    const [height, setHeight] = useState(window.innerHeight);
+    const [mouseX, setMouseX] = useState(0);
+    const [mouseY, setMouseY] = useState(0);
 
     useEffect(() => {
         const handleResize = () => {
