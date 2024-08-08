@@ -40,13 +40,13 @@ function App() {
 
   return (
       <div className="App">
+        <AnimBackground/>
         <Routes>
           <Route index element={<Index/>}/>
           <Route path={'tasks'} element={<Tasks/>}/>
           <Route path={'friends'} element={<Friends/>}/>
         </Routes>
         <Bottom/>
-        <AnimBackground/>
       </div>
   );
 }
