@@ -55,6 +55,7 @@ const AnimBackground = () => {
             <div className="star"></div>
             <div className="star"></div>
             <div className="star"></div>
+                <div className={'clear'}></div>
         </div>
     );
 };
