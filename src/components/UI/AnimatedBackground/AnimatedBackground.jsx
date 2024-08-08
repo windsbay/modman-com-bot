@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './AnimatedBackground.css';
-import Coin from './Coin/Coin';
+import Coin from './Coin';
 
 const AnimatedBackground = () => {
     const [coins, setCoins] = useState([]);
@@ -25,7 +25,7 @@ const AnimatedBackground = () => {
             const newCoin = {
                 top: Math.random() * height,
                 left: Math.random() * width,
-                size: Math.random() * 50 + 20,
+                size: Math.random() * 100 + 20,
                 coin: coins[Math.floor(Math.random() * coins.length)],
             };
 
@@ -41,6 +41,11 @@ const AnimatedBackground = () => {
         };
     }, [width, height]);
 
+    const coinsArray = [
+        { name: 'Bitcoin', image: '/img/bitcoin.png' },
+        { name: 'Ethereum', image: '/img/ethereum.png' },
+    ];
+
     return (
         <div className="animated-background">
             {coins.map((coin, index) => (
@@ -49,7 +54,7 @@ const AnimatedBackground = () => {
                     top={coin.top}
                     left={coin.left}
                     size={coin.size}
-                    coin={coin.coin}
+                    coin={coinsArray[Math.floor(Math.random() * coinsArray.length)]}
                 />
             ))}
         </div>
