@@ -7,7 +7,7 @@ nav {
 }
 
 nav a {
-    float: none;
+    float: left;
     position: relative;
     display: block;
     padding: 12px;
