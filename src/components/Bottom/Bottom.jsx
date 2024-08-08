@@ -6,7 +6,12 @@ const Bottom = () => {
     return (
         <div>
             <nav>
-
+                <a className={url.pathname === "/"? 'active' : ''} href="/">
+                    <div className={'icon'}>
+                        <i className="fas fa-fw fa-home" aria-hidden={true}></i>
+                    </div>
+                    <div className={'name'}><span data-text={'Home'}>Home</span></div>
+                </a>
                 <a className={url.pathname === '/tasks'? 'active' : ''} href={'/tasks'}>
                     <div className={'icon'}>
                         <i className="fas fa-fw fa-tasks" aria-hidden={true}></i>
