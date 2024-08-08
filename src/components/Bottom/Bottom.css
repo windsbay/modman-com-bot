@@ -1,4 +1,6 @@
 .bottom {
+    position: fixed;
+    bottom: 0;
     overflow: hidden;
     padding: 0 !important;
 }
