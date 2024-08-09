@@ -40,7 +40,6 @@ function App() {
 
   return (
       <div className="App">
-        <AnimatedBackground/>
         <Routes>
           <Route index element={<Index/>}/>
           <Route path={'tasks'} element={<Tasks/>}/>
