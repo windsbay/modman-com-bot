@@ -13,6 +13,7 @@ const Index = () => {
 
     return (
         <div className={'index'}>
+            <AnimatedBackground/>
 
                 <h1>{user?.username}</h1>
 
