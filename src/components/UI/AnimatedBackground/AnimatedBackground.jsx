@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './AnimatedBackground.css';
 import Coin from './Coin';
 import { Particles } from 'react-tsparticles';
-import { createPortal } from 'react-portal';
+import { createPortal } from 'react-dom';
 
 const AnimatedBackground = () => {
     const [coins, setCoins] = useState([]);
