@@ -25,24 +25,22 @@ const AnimatedBackground = () => {
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            if (coins.length < 10) {
-                const newCoin = {
-                    top: Math.random() * height,
-                    left: Math.random() * width,
-                    size: Math.random() * 100 + 20,
-                    coin: coins[Math.floor(Math.random() * coins.length)],
-                    velocityX: Math.random() * 2 - 1,
-                    velocityY: Math.random() * 2 - 1,
-                };
+            const newCoin = {
+                top: Math.random() * height,
+                left: Math.random() * width,
+                size: Math.random() * 100 + 20,
+                coin: coins[Math.floor(Math.random() * coins.length)],
+                velocityX: Math.random() * 2 - 1,
+                velocityY: Math.random() * 2 - 1,
+            };
 
-                setCoins((prevCoins) => [...prevCoins, newCoin]);
-            }
+            setCoins((prevCoins) => [...prevCoins, newCoin]);
         }, 1000);
 
         return () => {
             clearInterval(intervalId);
         };
-    }, [width, height, coins]);
+    }, [width, height]);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -81,7 +79,7 @@ const AnimatedBackground = () => {
                 const newCoins = prevCoins.filter((coin) => {
                     const distance = Math.sqrt((coin.top - mouseY) ** 2 + (coin.left - mouseX) ** 2);
 
-                    return distance > 100 && coin.top > 0 && coin.top < height && coin.left > 0 && coin.left < width;
+                    return distance > 100;
                 });
 
                 return newCoins;
