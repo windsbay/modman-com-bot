@@ -1,12 +1,7 @@
-import React from 'react';
+import React from 'eact';
 import './Coin.css';
 
-const coins = [
-    { name: 'Bitcoin', image: '/img/bitcoin.png' },
-    { name: 'Ethereum', image: '/img/ethereum.png' },
-];
-
-const Coin = ({ top, left, size, coin, velocityX, velocityY, onMouseMove }) => {
+const Coin = ({ top, left, size, coin, velocityX, velocityY }) => {
     return (
         <div
             className="coin"
@@ -17,7 +12,6 @@ const Coin = ({ top, left, size, coin, velocityX, velocityY, onMouseMove }) => {
                 height: `${size}px`,
                 backgroundImage: `url(${coin.image})`,
             }}
-            onMouseMove={onMouseMove}
         />
     );
 };

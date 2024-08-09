@@ -7,8 +7,6 @@ const AnimatedBackground = () => {
     const [coins, setCoins] = useState([]);
     const [width, setWidth] = useState(window.innerWidth);
     const [height, setHeight] = useState(window.innerHeight);
-    const [mouseX, setMouseX] = useState(0);
-    const [mouseY, setMouseY] = useState(0);
 
     useEffect(() => {
         const handleResize = () => {
@@ -29,7 +27,7 @@ const AnimatedBackground = () => {
                 top: Math.random() * height,
                 left: Math.random() * width,
                 size: Math.random() * 100 + 20,
-                coin: coins[Math.floor(Math.random() * coins.length)],
+                coin: Math.floor(Math.random() * 2),
                 velocityX: Math.random() * 2 - 1,
                 velocityY: Math.random() * 2 - 1,
             };
@@ -76,11 +74,7 @@ const AnimatedBackground = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCoins((prevCoins) => {
-                const newCoins = prevCoins.filter((coin) => {
-                    const distance = Math.sqrt((coin.top - mouseY) ** 2 + (coin.left - mouseX) ** 2);
-
-                    return distance > 100;
-                });
+                const newCoins = prevCoins.filter((coin, index) => index < 50);
 
                 return newCoins;
             });
@@ -89,12 +83,7 @@ const AnimatedBackground = () => {
         return () => {
             clearInterval(intervalId);
         };
-    }, [mouseX, mouseY]);
-
-    const handleMouseMove = (event) => {
-        setMouseX(event.clientX);
-        setMouseY(event.clientY);
-    };
+    }, []);
 
     const coinsArray = [
         { name: 'Bitcoin', image: '/img/bitcoin.png' },
@@ -108,28 +97,6 @@ const AnimatedBackground = () => {
             },
         },
         fpsLimit: 120,
-        interactivity: {
-            events: {
-                onClick: {
-                    enable: true,
-                    mode: 'push',
-                },
-                onHover: {
-                    enable: true,
-                    mode: 'epulse',
-                },
-                resize: true,
-            },
-            modes: {
-                push: {
-                    quantity: 4,
-                },
-                repulse: {
-                    distance: 200,
-                    duration: 0.4,
-                },
-            },
-        },
         particles: {
             color: {
                 value: '#fff',
@@ -180,10 +147,7 @@ const AnimatedBackground = () => {
     };
 
     return (
-        <div
-            className="animated-background"
-            onMouseMove={handleMouseMove}
-        >
+        <div className="animated-background">
             <Particles options={particlesOptions} />
             {coins.map((coin, index) => (
                 <Coin
@@ -191,10 +155,9 @@ const AnimatedBackground = () => {
                     top={coin.top}
                     left={coin.left}
                     size={coin.size}
-                    coin={coinsArray[Math.floor(Math.random() * coinsArray.length)]}
+                    coin={coinsArray[coin.coin]}
                     velocityX={coin.velocityX}
                     velocityY={coin.velocityY}
-                    onMouseMove={handleMouseMove}
                 />
             ))}
         </div>
