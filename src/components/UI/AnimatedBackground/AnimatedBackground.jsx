@@ -39,8 +39,8 @@ const AnimatedBackground = () => {
     }, [width, height]);
 
     const coinsArray = [
-        { name: 'Bitcoin', image: '/bitcoin.png' },
-        { name: 'Ethereum', image: '/ethereum.png' },
+        { name: 'Bitcoin', image: '/img/bitcoin.png' },
+        { name: 'Ethereum', image: '/img/ethereum.png' },
     ];
 
     const particlesOptions = {
