@@ -42,6 +42,55 @@ const AnimatedBackground = () => {
         };
     }, [width, height]);
 
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCoins((prevCoins) => {
+                const newCoins = prevCoins.map((coin) => {
+                    const newTop = coin.top + coin.velocityY;
+                    const newLeft = coin.left + coin.velocityX;
+
+                    if (newTop < 0 || newTop > height) {
+                        coin.velocityY = -coin.velocityY;
+                    }
+
+                    if (newLeft < 0 || newLeft > width) {
+                        coin.velocityX = -coin.velocityX;
+                    }
+
+                    return {
+                        ...coin,
+                        top: newTop,
+                        left: newLeft,
+                    };
+                });
+
+                return newCoins;
+            });
+        }, 16);
+
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, [width, height]);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCoins((prevCoins) => {
+                const newCoins = prevCoins.filter((coin) => {
+                    const distance = Math.sqrt((coin.top - mouseY) ** 2 + (coin.left - mouseX) ** 2);
+
+                    return distance > 100;
+                });
+
+                return newCoins;
+            });
+        }, 5000);
+
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, [mouseX, mouseY]);
+
     const handleMouseMove = (event) => {
         setMouseX(event.clientX);
         setMouseY(event.clientY);
@@ -130,37 +179,6 @@ const AnimatedBackground = () => {
         detectRetina: true,
     };
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setCoins((prevCoins) => {
-                const newCoins = prevCoins.map((coin) => {
-                    const newTop = coin.top + coin.velocityY;
-                    const newLeft = coin.left + coin.velocityX;
-
-                    if (newTop < 0 || newTop > height) {
-                        coin.velocityY = -coin.velocityY;
-                    }
-
-                    if (newLeft < 0 || newLeft > width) {
-                        coin.velocityX = -coin.velocityX;
-                    }
-
-                    return {
-                        ...coin,
-                        top: newTop,
-                        left: newLeft,
-                    };
-                });
-
-                return newCoins;
-            });
-        }, 16);
-
-        return () => {
-            clearInterval(intervalId);
-        };
-    }, [width, height]);
-
     return (
         <div
             className="animated-background"
@@ -170,8 +188,8 @@ const AnimatedBackground = () => {
             {coins.map((coin, index) => (
                 <Coin
                     key={index}
-                    top={coin.top + (mouseY - height / 2) * 0.1}
-                    left={coin.left + (mouseX - width / 2) * 0.1}
+                    top={coin.top}
+                    left={coin.left}
                     size={coin.size}
                     coin={coinsArray[Math.floor(Math.random() * coinsArray.length)]}
                     velocityX={coin.velocityX}
