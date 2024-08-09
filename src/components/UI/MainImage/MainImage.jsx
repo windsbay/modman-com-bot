@@ -9,7 +9,7 @@ const Image = styled.img`
     transition: transform 0.2s ease-in-out;
 
   &.active {
-    transform: scale(1.5);
+    transform: scale(0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
   }
