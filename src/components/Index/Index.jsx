@@ -2,7 +2,7 @@ import React from 'react';
 import './Index.css';
 
 import {useTelegram} from "../hooks/useTelegram";
-import TelegramAvatar from "../UI/TelegramAvatar/TelegramAvatar";
+import AnimatedBackground from "../UI/AnimatedBackground/AnimatedBackground";
 
 
 
@@ -13,6 +13,7 @@ const Index = () => {
 
     return (
         <div className={'index'}>
+            <AnimatedBackground />
             <div className={'name'}>
                 <h1>{user?.username}</h1>
             </div>
