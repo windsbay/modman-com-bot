@@ -6,7 +6,7 @@ const coins = [
     { name: 'Ethereum', image: '/img/ethereum.png' },
 ];
 
-const Coin = ({ top, left, size, coin }) => {
+const Coin = ({ top, left, size, coin, velocityX, velocityY, onMouseMove }) => {
     return (
         <div
             className="coin"
@@ -17,6 +17,7 @@ const Coin = ({ top, left, size, coin }) => {
                 height: `${size}px`,
                 backgroundImage: `url(${coin.image})`,
             }}
+            onMouseMove={onMouseMove}
         />
     );
 };
