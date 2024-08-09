@@ -74,7 +74,7 @@ const AnimatedBackground = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCoins((prevCoins) => {
-                const newCoins = prevCoins.filter((coin, index) => index < 50);
+                const newCoins = prevCoins.filter((coin, index) => index < 10);
 
                 return newCoins;
             });
