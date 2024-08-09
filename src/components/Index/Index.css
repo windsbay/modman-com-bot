@@ -27,6 +27,7 @@
     justify-self: center;
     margin-top: 50px;
     margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out;
 }
 
 .image .active {
