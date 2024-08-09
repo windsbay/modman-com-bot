@@ -11,12 +11,7 @@
         font-size: 2em;
     }
 
-    img {
-        width: 150px;
-        height: 150px;
-        justify-self: center;
-        margin-top: 50px;
-    }
+
 
     h2 {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -24,3 +19,9 @@
     }
 }
 
+img {
+    width: 150px;
+    height: 150px;
+    justify-self: center;
+    margin-top: 50px;
+}
