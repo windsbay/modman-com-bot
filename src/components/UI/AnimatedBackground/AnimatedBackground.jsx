@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './AnimatedBackground.css';
 import Coin from './Coin';
 import { Particles } from 'react-tsparticles';
+import { createPortal } from 'react-portal';
 
 const AnimatedBackground = () => {
     const [coins, setCoins] = useState([]);
@@ -147,7 +148,7 @@ const AnimatedBackground = () => {
         detectRetina: true,
     };
 
-    return (
+    return createPortal(
         <div className="animated-background">
             <Particles options={particlesOptions} />
             {coins.map((coin, index) => (
@@ -161,7 +162,7 @@ const AnimatedBackground = () => {
                     velocityY={coin.velocityY}
                 />
             ))}
-        </div>
+        </div>, document.body
     );
 };
 
