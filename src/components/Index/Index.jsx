@@ -10,6 +10,9 @@ const Index = () => {
 
     const {user} = useTelegram();
 
+    const onClick = () => {
+        alert('ok');
+    };
 
     return (
         <div className={'index'}>
@@ -18,7 +21,7 @@ const Index = () => {
                 <h1>{user?.username}</h1>
 
 
-                <img src="/img/modmancoin.png" alt=""/>
+                <img src="/img/modmancoin.png" alt="" onClick={onClick}/>
 
 
                 <h2>15,000</h2>
