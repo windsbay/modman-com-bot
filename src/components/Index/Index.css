@@ -6,25 +6,18 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    z-index: -1;
 }
 
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2em;
     background: none;
-    z-index: 1;
 }
 
 h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2em;
     background: none;
-    z-index: 1;
-}
-
-.name {
-
 }
 
 img {
@@ -33,5 +26,4 @@ img {
     justify-self: center;
     margin-top: 50px;
     background: none;
-    z-index: 1;
 }
