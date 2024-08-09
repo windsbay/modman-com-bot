@@ -11,7 +11,7 @@ const Index = () => {
     const {user} = useTelegram();
 
     const onClick = () => {
-        alert('ok');
+        console.log('clicked');
     };
 
     return (
