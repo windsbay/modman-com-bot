@@ -9,10 +9,12 @@ import AnimatedBackground from "../UI/AnimatedBackground/AnimatedBackground";
 const Index = () => {
 
     const {user} = useTelegram();
+    const image = document.querySelector('.image');
 
-    const onClick = () => {
-        console.log('clicked');
-    };
+    image.addEventListener('click', () => {
+        image.classList.toggle('active');
+    });
+
 
     return (
         <div className={'index'}>
@@ -21,7 +23,7 @@ const Index = () => {
                 <h1>{user?.username}</h1>
 
 
-                <img src="/img/modmancoin.png" alt="" onClick={onClick}/>
+                <img src="/img/modmancoin.png" className={'active'} alt="" />
 
 
                 <h2>15,000</h2>
