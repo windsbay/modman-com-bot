@@ -13,16 +13,15 @@ const Index = () => {
 
     return (
         <div className={'index'}>
-            <AnimatedBackground />
-            <div className={'name'}>
+
                 <h1>{user?.username}</h1>
-            </div>
-            <div>
+
+
                 <img src="/img/modmancoin.png" alt=""/>
-            </div>
-            <div className={'score'}>
+
+
                 <h2>15,000</h2>
-            </div>
+
         </div>
     );
 };
