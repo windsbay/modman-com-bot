@@ -19,7 +19,7 @@ const Index = () => {
     return (
         <div className={'index'}>
                 <h1>{user?.username}</h1>
-                <img src="/img/modmancoin.png" className={'active'} alt="" />
+                <img src="/img/modmancoin.png" className={'image'} alt="" />
                 <h2>15,000</h2>
         </div>
     );
