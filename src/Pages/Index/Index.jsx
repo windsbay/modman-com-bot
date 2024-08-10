@@ -1,8 +1,8 @@
 import React from 'react';
 import './Index.css';
 
-import {useTelegram} from "../hooks/useTelegram";
-import MainImage from "../UI/MainImage/MainImage";
+import {useTelegram} from "../../components/hooks/useTelegram";
+import MainImage from "../../components/UI/MainImage/MainImage";
 
 
 
