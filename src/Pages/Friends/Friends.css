@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Modman';
+    src: url('/fonts/modman.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 .friends {
     width: 100%;
     height: 100%;
@@ -16,4 +22,8 @@ img {
     border: #9b8f8f 2px solid;
     border-radius: 10%;
     background-color: #fff;
+}
+
+.projectSym{
+    font-family: 'Modman', sans-serif;
 }

@@ -9,7 +9,7 @@ const Friends = () => {
             <img src="/img/family.png" alt=""/>
             <h2>Invite Frens</h2>
             <div className={'refer-rewards'}>
-
+                    <p className={'projectSym'}>M</p>
             </div>
         </div>
     );
