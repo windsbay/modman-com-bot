@@ -20,7 +20,7 @@ img {
     width: calc(100% - 50px);
     height: 100px;
     border: #9b8f8f 2px solid;
-    border-radius: 10%;
+    border-radius: 20%;
     margin: 10px 10px;
     text-align: center;
     font-size: 50px;
