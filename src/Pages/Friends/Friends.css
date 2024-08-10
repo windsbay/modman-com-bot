@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Modman';
-    src: url('//fonts/modman.ttf') format('truetype');
+    src: url('/fonts/modman.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
