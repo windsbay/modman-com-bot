@@ -6,7 +6,7 @@ const Friends = () => {
     const emojicode = ':family_mwbb:';
     return (
         <div className={'friends'}>
-            <h1>👨‍👩‍👦‍👦</h1>
+            <img src="/img/family.png" alt=""/>
         </div>
     );
 };
