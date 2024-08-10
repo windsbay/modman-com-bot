@@ -7,7 +7,7 @@ const Friends = () => {
     return (
         <div className={'friends'}>
             <img src="/img/family.png" alt=""/>
-            <p>Invite Frens</p>
+            <h3>Invite Frens</h3>
         </div>
     );
 };
