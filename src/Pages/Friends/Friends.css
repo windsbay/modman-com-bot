@@ -23,9 +23,10 @@ img {
     border-radius: 10%;
     background-color: #fff;
     text-align: center;
+    font-size: 50px;
 }
 
 .projectSym{
     font-family: 'Modman', serif;
-    font-size: 50px;
+
 }
