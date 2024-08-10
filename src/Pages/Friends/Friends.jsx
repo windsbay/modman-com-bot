@@ -1,11 +1,13 @@
 import React from 'react';
 import './Friends.css';
-import {Emoji} from 'react-emoji-render';
+import { Picker, Emoji } from 'emoji-mart';
+
 
 const Friends = () => {
+    const emojicode = ':family_mwbb:';
     return (
         <div className={'friends'}>
-            <h1><Emoji text={':family_mwbb:'} /></h1>
+            <h1><Emoji emoji={emojicode} size={24} /></h1>
         </div>
     );
 };
