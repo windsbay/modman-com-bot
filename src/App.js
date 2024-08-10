@@ -1,14 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import React, {useEffect, useState} from 'react';
 import {useTelegram} from "./components/hooks/useTelegram";
 import {Route, Routes, useLocation, useParams} from "react-router-dom";
 import Tasks from "./Pages/Tasks/Tasks";
 import Friends from "./Pages/Friends/Friends";
-import Index from "./Pages/Index";
+import Index from "./Pages/Index/Index";
 import Bottom from "./components/Bottom/Bottom";
-import AnimatedBackground from "./components/UI/AnimatedBackground/AnimatedBackground";
-//import mysql from 'mysql';
 
 function App() {
   const {tg} = useTelegram();
