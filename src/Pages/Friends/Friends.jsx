@@ -11,7 +11,7 @@ const Friends = () => {
             <h2>Invite Frens</h2>
             <div className={'refer-rewards'}>
                     <p><span className={'projectSym'}>M</span> 0</p>
-                    <Button disabled>Claim</Button>
+                    <Button style={'width: 100px; height: 50px'}>Claim</Button>
             </div>
         </div>
     );
