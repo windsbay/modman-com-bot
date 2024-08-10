@@ -28,9 +28,11 @@ p {
     height: 180px;
     border: #9b8f8f 2px solid;
     border-radius: 50px;
-    margin: 10px 20%;
+    margin: 10px 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
-    font-size: 50px;
+    font-size: 20px;
 }
 
 .projectSym{
