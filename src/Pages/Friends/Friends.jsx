@@ -1,6 +1,6 @@
 import React from 'react';
 import './Friends.css';
-import {Emoji} from 'react-emoji-render'
+import {Emoji} from 'react-emoji-render';
 
 const Friends = () => {
     return (
