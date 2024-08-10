@@ -1,5 +1,6 @@
 import React from 'react';
 import './Friends.css';
+import Button from "../../components/UI/Button/Button";
 
 
 const Friends = () => {
@@ -9,7 +10,8 @@ const Friends = () => {
             <img src="/img/family.png" alt=""/>
             <h2>Invite Frens</h2>
             <div className={'refer-rewards'}>
-                    <p className={'projectSym'}>M</p>
+                    <p><span className={'projectSym'}>M</span> 0</p>
+                    <Button >Claim</Button>
             </div>
         </div>
     );
