@@ -1,6 +1,5 @@
 import React from 'react';
 import './Friends.css';
-import Button from "../../components/UI/Button/Button";
 
 
 const Friends = () => {
@@ -11,7 +10,7 @@ const Friends = () => {
             <h2>Invite Frens</h2>
             <div className={'refer-rewards'}>
                     <p><span className={'projectSym'}>M</span> 0</p>
-                    <button className={'glow-on-hover'} type={'button'}>Claim</button>
+                    <button style={"font-size: 20px;"} className={'glow-on-hover'} type={'button'}>Claim</button>
             </div>
         </div>
     );
