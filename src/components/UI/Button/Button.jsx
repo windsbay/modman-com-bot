@@ -3,7 +3,7 @@ import './Button.css';
 
 const Button = (props) => {
     return (
-        <button {...props} className={'glow-on-hover' + (props.className)} type={'button'} />
+        <button {...props} className={'glow-on-hover'} type={'button'} />
     );
 };
 
