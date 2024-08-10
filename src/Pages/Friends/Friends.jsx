@@ -1,11 +1,11 @@
 import React from 'react';
 import './Friends.css';
-import twemoji from 'twemoji';
+import {Emoji} from 'react-emoji-render'
 
 const Friends = () => {
     return (
         <div className={'friends'}>
-            <h1>{twemoji.parse(':family_mwbb:')}</h1>
+            <h1><Emoji text={':family_mwbb:'} /></h1>
         </div>
     );
 };
