@@ -22,7 +22,7 @@ const Bottom = () => {
                     <div className={'icon'}>
                         <i className="fas fa-fw fa-users" aria-hidden={true}></i>
                     </div>
-                    <div className={'name'}><span data-text={'Friends'}>Friends</span></div>
+                    <div className={'name'}><span data-text={'Friends'}>Friens</span></div>
                 </a>
             </nav>
         </div>
