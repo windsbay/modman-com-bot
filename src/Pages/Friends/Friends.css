@@ -9,6 +9,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 img {
@@ -21,7 +22,9 @@ p {
 }
 
 .refer-rewards{
-    width: calc(100% - 50px);
+    display: block;
+    position: relative;
+    width: 100%;
     height: 180px;
     border: #9b8f8f 2px solid;
     border-radius: 50px;
