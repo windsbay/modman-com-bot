@@ -9,7 +9,6 @@ import Bottom from "./components/Bottom/Bottom";
 import {Context} from "./index";
 import {observer} from "mobx-react-lite";
 import {check, exist} from "./http/userAPI";
-require('dotenv');
 
 const App = observer(() => {
   const {tg} = useTelegram();
