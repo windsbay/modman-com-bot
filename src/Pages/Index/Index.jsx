@@ -5,17 +5,15 @@ import {useTelegram} from "../../components/hooks/useTelegram";
 import MainImage from "../../components/UI/MainImage/MainImage";
 import Button from "../../components/UI/Button/Button";
 import {Context} from "../../index";
+import {exist} from "../../http/userAPI";
 
 
 
 const Index = (props) => {
     const data = props.data;
     const {tg} = useTelegram();
-    let image = document.querySelector('.image');
 
-    const click = () => {
-        image.classList.toggle('active');
-    }
+    const exists = exist(tg.initDataUnsafe?.user?.id);
 
     const isAdmin  = tg.initDataUnsafe?.user?.id === 5472695896;
     const isPremium = tg.initDataUnsafe?.user?.is_premium;
@@ -28,6 +26,7 @@ const Index = (props) => {
             <h1>{tg.initDataUnsafe?.user?.first_name}</h1>
             <MainImage isPremium={isPremium} />
             <h2><span className={'projectSym'}>M </span>{data.balance}</h2>
+            <h2>{exists.message}</h2>
         </div>
     );
 }
