@@ -9,8 +9,8 @@ const MainImage = (props) => {
             src="/img/modmancoin.png"
             className={'image'}
             style={{
-                border: isP? '2px solid #fff' : '',
-                boxShadow: isP? '0 0 10px #fff' : '',
+                border: isP? '4px solid #fff' : '',
+                boxShadow: isP? '0 0 20px #fff' : '',
             }}
          alt={''}/>
     );
