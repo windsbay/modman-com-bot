@@ -27,7 +27,7 @@ const Index = (data) => {
             {isAdmin? <Button>Admin Panel</Button> : ""}
             <h1>{tg.initDataUnsafe?.user?.first_name}</h1>
             <MainImage />
-            <h2><span className={'projectSym'}>M </span>{data.balance}</h2>
+            <h2><span className={'projectSym'}>M </span>{data}</h2>
         </div>
     );
 }
