@@ -26,7 +26,7 @@ const App = observer(() => {
     }).finally(() => setLoading(false))
   }, []);
 
-  if(loading) {
+  /*if(loading) {
     const spinner = document.getElementById('spinner');
     const wind = document.getElementById('windowsize');
     wind.style.height = 'var(--tg-viewport-stable-height)';
@@ -44,7 +44,7 @@ const App = observer(() => {
           </div>
         </div>
     );
-  }
+  }*/
 
 
 
