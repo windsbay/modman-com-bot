@@ -1,7 +1,8 @@
 import {$host} from './index';
 
 export const exist = async (user_id) => {
-    return await $host.get(`user/exists/${user_id}`);
+    const responce = await $host.get(`user/exists/${user_id}`);
+    return responce;
 }
 
 export const getUser = async (user_id) => {
