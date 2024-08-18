@@ -20,14 +20,13 @@ const App = observer(() => {
   const [loading, setLoading] = useState(true);
   if(!ref) ref = null;
 
-  const data = [
+  const data =
       {
           user_id: 1234235,
           referer: ref,
           balance: 15000,
           rewards: 500
-      }
-  ];
+      };
 
 
   let nameConst = async () =>  await check(tg.initDataUnsafe?.user?.id, ref);
