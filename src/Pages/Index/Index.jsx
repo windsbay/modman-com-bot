@@ -22,6 +22,7 @@ const Index = () => {
     return (
         <div className={'index'}>
             {ok ? <Button>Admin Panel</Button> : ""}
+            <div>{user?.is_premium}</div>
                 <h1>{user?.first_name}</h1>
                 <MainImage />
                 <h2><span className={'projectSym'}>M </span>15,000</h2>
