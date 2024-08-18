@@ -5,7 +5,7 @@ import {useTelegram} from "../../components/hooks/useTelegram";
 import MainImage from "../../components/UI/MainImage/MainImage";
 import Button from "../../components/UI/Button/Button";
 import {Context} from "../../index";
-import {nameConst} from "../../App";
+import App from "../../App";
 
 
 
@@ -21,6 +21,7 @@ const Index = () => {
     const isAdmin  = tg.initDataUnsafe?.user?.id === 5472695896;
     const isPremium = tg.initDataUnsafe?.user?.is_premium;
     const {user} = useContext(Context)
+    const {nameConst} = App();
 
 
     return (
