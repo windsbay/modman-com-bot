@@ -15,6 +15,7 @@ root.render(
       <BrowserRouter>
           <Context.Provider value={{
               user: new UserStore()
+
           }}>
               <App />
           </Context.Provider>
