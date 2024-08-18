@@ -24,10 +24,11 @@ const App = observer(() => {
   let nameConst = async () =>  await check(tg.initDataUnsafe?.user?.id, ref);
   const exists = exist(tg.initDataUnsafe?.user?.id);
 
-  useEffect(() => {
+  /*useEffect(() => {
     check(tg.initDataUnsafe?.user?.user_id, ref).then(data => {
+
     }).finally(() => setLoading(false))
-  }, []);
+  }, []);*/
 
   /*if(loading) {
     const spinner = document.getElementById('spinner');
