@@ -5,7 +5,6 @@ import {useTelegram} from "../../components/hooks/useTelegram";
 import MainImage from "../../components/UI/MainImage/MainImage";
 import Button from "../../components/UI/Button/Button";
 import {Context} from "../../index";
-import App from "../../App";
 
 
 
