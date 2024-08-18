@@ -37,7 +37,6 @@ const App = observer(() => {
     spinner.style.backgroundSize = 'var(--tg-viewport-stable-width)'+" "+"var(--tg-viewport-stable-height);";
     return (
         <div id="spinner">
-          <!-- <img id="preloader" src="img/preloader-bg.jpg" alt=""> -->
           <div id="windowsize"></div>
           <div className="loader">
             <div className="inner one"></div>
