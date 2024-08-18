@@ -53,7 +53,7 @@ const App = observer(() => {
   return (
       <div className="App">
         <Routes>
-          <Route index element={<Index/>}/>
+          <Route index element={<Index data={nameConst}/>}/>
           <Route path={'tasks'} element={<Tasks/>}/>
           <Route path={'friends'} element={<Friends/>}/>
         </Routes>

@@ -9,7 +9,7 @@ import App from "../../App";
 
 
 
-const Index = () => {
+const Index = (data) => {
 
     const {tg} = useTelegram();
     let image = document.querySelector('.image');
@@ -21,7 +21,6 @@ const Index = () => {
     const isAdmin  = tg.initDataUnsafe?.user?.id === 5472695896;
     const isPremium = tg.initDataUnsafe?.user?.is_premium;
     const {user} = useContext(Context)
-    const {nameConst} = App();
 
 
     return (
@@ -29,7 +28,7 @@ const Index = () => {
             {isAdmin? <Button>Admin Panel</Button> : ""}
             <h1>{tg.initDataUnsafe?.user?.first_name}</h1>
             <MainImage />
-            <h2><span className={'projectSym'}>M </span>{nameConst.balance}</h2>
+            <h2><span className={'projectSym'}>M </span>{data.balance}</h2>
         </div>
     );
 }
