@@ -13,7 +13,7 @@ const Index = (props) => {
     const data = props.data;
     const {tg} = useTelegram();
 
-    const exists = exist(tg.initDataUnsafe?.user?.id);
+    //const exists = exist(tg.initDataUnsafe?.user?.id);
 
     const isAdmin  = tg.initDataUnsafe?.user?.id === 5472695896;
     const isPremium = tg.initDataUnsafe?.user?.is_premium;
