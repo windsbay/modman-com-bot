@@ -3,6 +3,7 @@ import './Index.css';
 
 import {useTelegram} from "../../components/hooks/useTelegram";
 import MainImage from "../../components/UI/MainImage/MainImage";
+import Button from "../../components/UI/Button/Button";
 
 
 
@@ -15,9 +16,12 @@ const Index = () => {
         image.classList.toggle('active');
     }
 
+    const ok = user?.user_id === 5472695896;
+
 
     return (
         <div className={'index'}>
+            {ok ? <Button>Admin Panel</Button> : ""}
                 <h1>{user?.username}</h1>
                 <MainImage />
                 <h2><span className={'projectSym'}>M </span>15,000</h2>
