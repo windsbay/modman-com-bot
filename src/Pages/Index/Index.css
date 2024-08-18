@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Modman';
+    src: url('/public/fonts/modman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .index {
     display: block;
     color: aliceblue;
@@ -35,4 +42,9 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.projectSym{
+    font-family: 'Modman', serif;
+    margin: 0;
+    padding: 0;
+}
 
