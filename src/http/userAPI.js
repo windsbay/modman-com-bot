@@ -1,6 +1,4 @@
 import {$host} from './index';
-import {useContext} from "react";
-import {Context} from "../index";
 
 export const exist = async (user_id) => {
     return await $host.get(`user/exists/${user_id}`);

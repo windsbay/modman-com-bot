@@ -9,6 +9,7 @@ import Bottom from "./components/Bottom/Bottom";
 import {Context} from "./index";
 import {observer} from "mobx-react-lite";
 import {check, exist} from "./http/userAPI";
+require('dotenv');
 
 const App = observer(() => {
   const {tg} = useTelegram();
@@ -54,7 +55,7 @@ const App = observer(() => {
   return (
       <div className="App">
         <Routes>
-          <Route index element={<Index data={nameConst} exists={exists.message} />}/>
+          <Route index element={<Index data={nameConst} exists={exists} />}/>
           <Route path={'tasks'} element={<Tasks/>}/>
           <Route path={'friends'} element={<Friends/>}/>
         </Routes>
