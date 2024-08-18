@@ -1,4 +1,6 @@
 import {$host} from './index';
+import {useContext} from "react";
+import {Context} from "../index";
 
 export const exist = async (user_id) => {
     return await $host.get(`user/exists/${user_id}`);
@@ -9,9 +11,11 @@ export const getUser = async (user_id) => {
 }
 
 export const check = async (user_id, referer) => {
+    const {user} = useContext(Context);
     try {
         const responce = await $host.get(`user/${user_id}`);
         if(responce.data.exist){
+            user.setUser(responce.data)
             return responce.data;
         } else {
             const userData = {
@@ -21,6 +25,7 @@ export const check = async (user_id, referer) => {
             }
 
             const createUserResponce = await $host.post('user/', userData);
+            user.setUser(createUserResponce.data)
             return createUserResponce.data;
         }
     } catch (error) {
