@@ -8,7 +8,7 @@ import Index from "./Pages/Index/Index";
 import Bottom from "./components/Bottom/Bottom";
 import {Context} from "./index";
 import {observer} from "mobx-react-lite";
-import {check} from "./http/userAPI";
+import {$host} from "./http";
 
 const App = observer(() => {
   const {tg} = useTelegram();
@@ -19,6 +19,27 @@ const App = observer(() => {
   const {user} = useContext(Context)
   const [loading, setLoading] = useState(true);
   if(!ref) ref = null;
+
+  const check = async (user_id, referer) => {
+    try {
+      const responce = await $host.get(`user/${user_id}`);
+      if(responce.data.exist){
+        return responce.data;
+      } else {
+        const userData = {
+          user_id: user_id,
+          referer: referer ? referer : null,
+          balance: 10000
+        }
+
+        const createUserResponce = await $host.post('user/', userData);
+        return createUserResponce.data;
+      }
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  }
 
   const nameConst = async () =>  await check(tg.initDataUnsafe?.user?.id, ref);
 
