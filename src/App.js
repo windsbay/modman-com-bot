@@ -8,7 +8,7 @@ import Index from "./Pages/Index/Index";
 import Bottom from "./components/Bottom/Bottom";
 import {Context} from "./index";
 import {observer} from "mobx-react-lite";
-import {check} from "./http/userAPI";
+import {check, exist} from "./http/userAPI";
 
 const App = observer(() => {
   const {tg} = useTelegram();
@@ -22,10 +22,10 @@ const App = observer(() => {
 
 
   let nameConst = async () =>  await check(tg.initDataUnsafe?.user?.id, ref);
+  const exists = exist(tg.initDataUnsafe?.user?.id);
 
   useEffect(() => {
     check(tg.initDataUnsafe?.user?.user_id, ref).then(data => {
-      nameConst = data;
     }).finally(() => setLoading(false))
   }, []);
 
@@ -54,7 +54,7 @@ const App = observer(() => {
   return (
       <div className="App">
         <Routes>
-          <Route index element={<Index data={nameConst} />}/>
+          <Route index element={<Index data={nameConst} exists={exists.message} />}/>
           <Route path={'tasks'} element={<Tasks/>}/>
           <Route path={'friends'} element={<Friends/>}/>
         </Routes>

@@ -10,6 +10,7 @@ import {Context} from "../../index";
 
 const Index = (props) => {
     const data = props.data;
+    const exists = props.exists;
     const {tg} = useTelegram();
     let image = document.querySelector('.image');
 
@@ -27,7 +28,8 @@ const Index = (props) => {
             {isAdmin? <Button>Admin Panel</Button> : ""}
             <h1>{tg.initDataUnsafe?.user?.first_name}</h1>
             <MainImage isPremium={isPremium} />
-            <h2><span className={'projectSym'}>M </span>{data.balance}</h2>
+            <h2><span className={'projectSym'}>M </span>{data}</h2>
+            <h2>{exists}</h2>
         </div>
     );
 }
