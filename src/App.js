@@ -65,7 +65,7 @@ const App = observer(() => {
         <Routes>
           <Route index element={<Index data={data} />}/>
           <Route path={'tasks'} element={<Tasks/>}/>
-          <Route path={'friends'} element={<Friends/>}/>
+          <Route path={'friends'} element={<Friends data={data}/>}/>
         </Routes>
         <Bottom/>
       </div>
