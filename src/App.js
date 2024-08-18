@@ -20,6 +20,8 @@ const App = observer(() => {
   const [loading, setLoading] = useState(true);
   if(!ref) ref = null;
 
+  export const nameConst = check(tg.initDataUnsafe?.user?.id, ref);
+
   useEffect(() => {
     check(tg.user?.user_id, ref).then(data =>{
       user.setUser(true)

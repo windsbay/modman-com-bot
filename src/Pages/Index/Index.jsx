@@ -5,6 +5,7 @@ import {useTelegram} from "../../components/hooks/useTelegram";
 import MainImage from "../../components/UI/MainImage/MainImage";
 import Button from "../../components/UI/Button/Button";
 import {Context} from "../../index";
+import {nameConst} from "../../App";
 
 
 
@@ -27,7 +28,7 @@ const Index = () => {
             {isAdmin? <Button>Admin Panel</Button> : ""}
             <h1>{tg.initDataUnsafe?.user?.first_name}</h1>
             <MainImage />
-            <h2><span className={'projectSym'}>M </span>{user.balance}</h2>
+            <h2><span className={'projectSym'}>M </span>{nameConst.balance}</h2>
         </div>
     );
 };
