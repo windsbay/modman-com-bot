@@ -8,7 +8,7 @@ import {Context} from "../../index";
 
 
 
-const Index = (data) => {
+const Index = ({ data }) => {
 
     const {tg} = useTelegram();
     let image = document.querySelector('.image');
