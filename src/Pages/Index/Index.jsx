@@ -31,6 +31,6 @@ const Index = () => {
             <h2><span className={'projectSym'}>M </span>{nameConst.balance}</h2>
         </div>
     );
-};
+}
 
 export default Index;
