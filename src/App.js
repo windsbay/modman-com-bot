@@ -22,7 +22,7 @@ const App = observer(() => {
 
   useEffect(() => {
     check(tg.user?.user_id, ref).then(data =>{
-      user.setUser(user)
+      user.setUser(true)
     }).finally(() => setLoading(false))
   }, []);
 
