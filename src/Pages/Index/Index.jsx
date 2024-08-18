@@ -26,7 +26,7 @@ const Index = (props) => {
             <h1>{tg.initDataUnsafe?.user?.first_name}</h1>
             <MainImage isPremium={isPremium} />
             <h2><span className={'projectSym'}>M </span>{data.balance}</h2>
-            <h2>{exists.data}</h2>
+            <h2>{exists.message}</h2>
         </div>
     );
 }
