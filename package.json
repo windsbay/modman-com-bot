@@ -30,6 +30,7 @@
     "yarn": "^1.22.22"
   },
   "scripts": {
+    "lint": "eslint src --max-warnings=0",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
