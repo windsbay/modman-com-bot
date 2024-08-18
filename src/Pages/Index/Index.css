@@ -48,3 +48,8 @@
     padding: 0;
 }
 
+.glow {
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px #fff;
+}
+
