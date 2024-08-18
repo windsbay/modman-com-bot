@@ -7,7 +7,6 @@ import Friends from "./Pages/Friends/Friends";
 import Index from "./Pages/Index/Index";
 import Bottom from "./components/Bottom/Bottom";
 import {Context} from "./index";
-import {observe} from "mobx";
 import {observer} from "mobx-react-lite";
 import {check} from "./http/userAPI";
 
