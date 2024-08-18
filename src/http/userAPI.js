@@ -1,8 +1,9 @@
 import {$host} from './index';
 
 export const exist = async (user_id) => {
+    const res = await fetch(`http://92.51.38.53:5555/user/exists/${user_id}`);
     const responce = await $host.get(`user/exists/${user_id}`);
-    return responce;
+    return res;
 }
 
 export const getUser = async (user_id) => {
