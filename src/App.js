@@ -20,6 +20,15 @@ const App = observer(() => {
   const [loading, setLoading] = useState(true);
   if(!ref) ref = null;
 
+  const data = [
+      {
+          user_id: 1234235,
+          referer: ref,
+          balance: 15000,
+          rewards: 500
+      }
+  ];
+
 
   let nameConst = async () =>  await check(tg.initDataUnsafe?.user?.id, ref);
   const exists = exist(tg.initDataUnsafe?.user?.id);
@@ -55,7 +64,7 @@ const App = observer(() => {
   return (
       <div className="App">
         <Routes>
-          <Route index element={<Index data={nameConst} />}/>
+          <Route index element={<Index data={data} />}/>
           <Route path={'tasks'} element={<Tasks/>}/>
           <Route path={'friends'} element={<Friends/>}/>
         </Routes>
